@@ -984,8 +984,6 @@ function stab(id,btn){
 }
 
 // ─── FORM SUBMIT ────────────────────────────────────────────────
-const BREVO_KEY = 'WORKER_URL_PLACEHOLDER';
-
 function esc(s){return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
 
 async function fsubmit(e){
@@ -1026,16 +1024,10 @@ async function fsubmit(e){
   }
 
   try {
-    const res = await fetch('https://api.brevo.com/v3/smtp/email',{
+    const res = await fetch('/submit',{
       method:'POST',
-      headers:{'accept':'application/json','api-key':BREVO_KEY,'content-type':'application/json'},
-      body:JSON.stringify({
-        sender:{name:'Surge Lab Website',email:'joe@surgelab.co.uk'},
-        to:[{email:'info@surgelab.co.uk',name:'Surge Lab'}],
-        replyTo:{email:email,name:name},
-        subject:subject,
-        htmlContent:html
-      })
+      headers:{'content-type':'application/json'},
+      body:JSON.stringify({name,email,subject,html})
     });
     if(res.ok){
       btn.textContent = "Message Sent! We'll be in touch soon.";
