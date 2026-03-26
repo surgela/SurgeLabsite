@@ -1,4 +1,8 @@
 User-agent: *
 Allow: /
+Disallow: /wp-
+Disallow: /wp-admin/
+Disallow: /wp-content/
+Disallow: /wp-includes/
 
 Sitemap: https://surgelab.co.uk/sitemap.xml
