@@ -52,6 +52,14 @@ export default {
     }
 
     // All other requests served as static assets
-    return env.ASSETS.fetch(request);
+    try {
+      const response = await env.ASSETS.fetch(request);
+      if (response.status === 404) {
+        return new Response('Not found', { status: 404 });
+      }
+      return response;
+    } catch {
+      return new Response('Not found', { status: 404 });
+    }
   }
 };
