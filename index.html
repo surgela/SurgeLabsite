@@ -134,7 +134,7 @@ h1,h2,h3,h4,h5{font-family:'Space Grotesk',sans-serif;font-weight:700;line-heigh
 ::-webkit-scrollbar{width:3px}::-webkit-scrollbar-thumb{background:var(--lime)}
 
 /* PAGES */
-.pg{display:none}.pg.on{display:block;animation:pgIn 0.45s cubic-bezier(0.22,1,0.36,1)}
+.js .pg:not(.on){display:none}.pg.on{display:block;animation:pgIn 0.45s cubic-bezier(0.22,1,0.36,1)}
 @keyframes pgIn{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:translateY(0)}}
 
 /* NAV */
@@ -410,7 +410,7 @@ footer{background:#040406;border-top:1px solid var(--border);padding:65px 6% 32p
 }
 </style>
 </head>
-<body>
+<body><script>document.documentElement.classList.add('js')</script>
 
 <!-- MOBILE MENU -->
 <div class="mm" id="mob" aria-modal="true" role="dialog" aria-label="Mobile navigation">
