@@ -483,26 +483,22 @@ footer{background:#040406;border-top:1px solid var(--border);padding:65px 6% 32p
               <input class="fi" id="h-email" type="email" placeholder="you@company.com" required autocomplete="email"/>
             </div>
             <div class="fg">
-              <label class="fl" for="h-biz">Business Type</label>
-              <select class="fi" id="h-biz" required>
-                <option value="" disabled selected>Select your industry</option>
-                <option>E-commerce</option>
-                <option>Professional Services</option>
-                <option>Health &amp; Aesthetics</option>
-                <option>Hospitality &amp; Leisure</option>
-                <option>Construction &amp; Trades</option>
-                <option>Other</option>
+              <label class="fl" for="h-phone">Phone (optional)</label>
+              <input class="fi" id="h-phone" type="tel" placeholder="07700 000000" autocomplete="tel"/>
+            </div>
+            <div class="fg">
+              <label class="fl" for="h-service">Service Interested In</label>
+              <select class="fi" id="h-service" required>
+                <option value="" disabled selected>Select a service</option>
+                <option>Web Design &amp; SEO</option>
+                <option>Paid Advertising (Google / Meta)</option>
+                <option>Full Growth System</option>
+                <option>Not sure &mdash; need advice</option>
               </select>
             </div>
             <div class="fg">
-              <label class="fl" for="h-goal">Primary Goal</label>
-              <select class="fi" id="h-goal" required>
-                <option value="" disabled selected>What do you need?</option>
-                <option>New Website &amp; SEO</option>
-                <option>Paid Advertising (Google / Meta)</option>
-                <option>Full Growth System</option>
-                <option>Not sure &mdash; I need advice</option>
-              </select>
+              <label class="fl" for="h-msg">Tell Us About Your Goals</label>
+              <textarea class="fi" id="h-msg" placeholder="What are you trying to achieve? Current challenges? Any context helps..." required></textarea>
             </div>
             <button class="fsub" type="submit">Get My Free Audit &rarr;</button>
           </form>
@@ -996,14 +992,16 @@ async function fsubmit(e){
   if(isHome){
     name  = f.querySelector('#h-name').value;
     email = f.querySelector('#h-email').value;
-    const biz  = f.querySelector('#h-biz').value;
-    const goal = f.querySelector('#h-goal').value;
+    const phone   = f.querySelector('#h-phone').value;
+    const service = f.querySelector('#h-service').value;
+    const msg     = f.querySelector('#h-msg').value;
     subject = `New Free Audit Request – ${name}`;
     html = `<h2>New Audit Request</h2>
 <p><strong>Name:</strong> ${esc(name)}</p>
 <p><strong>Email:</strong> ${esc(email)}</p>
-<p><strong>Business Type:</strong> ${esc(biz)}</p>
-<p><strong>Primary Goal:</strong> ${esc(goal)}</p>`;
+<p><strong>Phone:</strong> ${esc(phone)||'Not provided'}</p>
+<p><strong>Service:</strong> ${esc(service)}</p>
+<p><strong>Message:</strong></p><p>${esc(msg).replace(/\n/g,'<br>')}</p>`;
   } else {
     name  = f.querySelector('#c-name').value;
     email = f.querySelector('#c-email').value;
