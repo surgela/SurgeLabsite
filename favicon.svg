@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100">
+  <!-- Black background -->
+  <rect width="100" height="100" fill="#000000"/>
+
+  <!-- Flask body -->
+  <path d="M38 18 L38 42 L20 72 Q17 78 20 83 Q23 88 30 88 L70 88 Q77 88 80 83 Q83 78 80 72 L62 42 L62 18 Z"
+        fill="#000000" stroke="white" stroke-width="3.5" stroke-linejoin="round"/>
+
+  <!-- Teal liquid fill at bottom -->
+  <clipPath id="flask-clip">
+    <path d="M38 18 L38 42 L20 72 Q17 78 20 83 Q23 88 30 88 L70 88 Q77 88 80 83 Q83 78 80 72 L62 42 L62 18 Z"/>
+  </clipPath>
+  <rect x="10" y="68" width="80" height="30" fill="url(#teal-grad)" clip-path="url(#flask-clip)"/>
+
+  <!-- Chart line with arrow -->
+  <polyline points="25,76 38,60 50,66 64,46 76,30"
+            fill="none" stroke="url(#line-grad)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Arrow head -->
+  <polygon points="76,30 68,32 72,40" fill="#00C49A"/>
+
+  <!-- Flask neck top bar -->
+  <rect x="35" y="15" width="30" height="5" rx="2" fill="white"/>
+
+  <defs>
+    <linearGradient id="teal-grad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#00C49A" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#00C49A"/>
+    </linearGradient>
+    <linearGradient id="line-grad" x1="0" y1="1" x2="1" y2="0">
+      <stop offset="0%" stop-color="#00C49A"/>
+      <stop offset="100%" stop-color="#00C49A"/>
+    </linearGradient>
+  </defs>
+</svg>
