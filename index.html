@@ -1028,6 +1028,11 @@ async function fsubmit(e){
     if(res.ok){
       btn.textContent = "Message Sent! We'll be in touch soon.";
       btn.style.background = '#22c55e';
+      gtag('event', 'conversion', {
+        'send_to': 'AW-18109052484/FdBpCNau858cEMTsiLtD',
+        'value': 1.0,
+        'currency': 'GBP'
+      });
       setTimeout(()=>{btn.textContent=orig;btn.style.background='';btn.disabled=false;f.reset();},4000);
     } else {
       throw new Error('api');
@@ -1054,6 +1059,7 @@ document.querySelectorAll('.sc-card').forEach(card=>{
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
   gtag('config', 'G-PN03EJ0BLN');
+  gtag('config', 'AW-18109052484');
 </script>
 </body>
 </html>
