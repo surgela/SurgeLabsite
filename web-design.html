@@ -1,0 +1,852 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Bespoke Web Design That Ranks on Google | Free Site Audit | Surge Lab</title>
+<meta name="description" content="Surge Lab builds coded websites in pure HTML/CSS/JS — no WordPress, no templates. 97+ PageSpeed scores, built-in SEO and conversion-optimised from day one. Claim your free site audit."/>
+<meta name="robots" content="noindex, follow"/>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-PN03EJ0BLN"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-PN03EJ0BLN');
+  gtag('config', 'AW-18109052484');
+</script>
+<meta name="theme-color" content="#09090B"/>
+<link rel="preload" href="surgelab_logo_transparent_hires.png" as="image" type="image/png"/>
+<link rel="preload" href="/fonts/space-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin/>
+<link rel="preload" href="/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin/>
+<style>
+@font-face{font-family:'Space Grotesk';font-style:normal;font-weight:400 700;font-display:swap;src:url('/fonts/space-grotesk-latin.woff2') format('woff2')}
+@font-face{font-family:'Inter';font-style:normal;font-weight:400 500;font-display:swap;src:url('/fonts/inter-latin.woff2') format('woff2')}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg:#09090B;--bg2:#0E0E14;--bg3:#15151D;--card:#111119;
+  --border:rgba(255,255,255,0.07);--borderHover:rgba(202,255,51,0.22);
+  --lime:#CAFF33;--limeDim:rgba(202,255,51,0.07);
+  --indigo:#6366F1;--indigoDim:rgba(99,102,241,0.08);
+  --white:#FAFAFA;--muted:#6B7280;--subtle:#374151;
+}
+html{scroll-behavior:smooth;font-size:16px}
+body{font-family:'Inter',system-ui,sans-serif;background:var(--bg);color:var(--white);overflow-x:hidden;line-height:1.65;-webkit-font-smoothing:antialiased}
+h1,h2,h3,h4{font-family:'Space Grotesk',system-ui,sans-serif;font-weight:700;line-height:1.08;letter-spacing:-0.02em}
+::-webkit-scrollbar{width:3px}::-webkit-scrollbar-thumb{background:var(--lime)}
+a{text-decoration:none;color:inherit}
+
+/* ── NAV — logo + phone only, no distracting links (PPC best practice) ── */
+nav{
+  position:fixed;top:0;left:0;right:0;z-index:500;
+  height:70px;padding:0 6%;
+  display:flex;align-items:center;justify-content:space-between;
+  background:rgba(9,9,11,0.92);backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);
+  border-bottom:1px solid var(--border);transition:height 0.3s,box-shadow 0.3s;
+}
+nav.sc{height:60px;box-shadow:0 4px 40px rgba(0,0,0,0.5)}
+.nl{display:flex;align-items:center;cursor:pointer;text-decoration:none}
+.nl img{height:58px;width:58px;object-fit:contain;filter:drop-shadow(0 0 10px rgba(202,255,51,0.18));transition:filter 0.3s}
+.nl:hover img{filter:drop-shadow(0 0 18px rgba(202,255,51,0.4))}
+.nav-right{display:flex;align-items:center;gap:1.5rem}
+.nav-phone{font-family:'Space Grotesk',sans-serif;font-size:0.83rem;font-weight:500;color:var(--muted)}
+.nav-phone a{color:var(--lime)}
+.ncta{font-family:'Space Grotesk',sans-serif;background:var(--lime);color:#09090B;font-size:0.79rem;font-weight:700;letter-spacing:0.2px;padding:0.52rem 1.3rem;border-radius:8px;border:none;cursor:pointer;transition:all 0.2s;text-decoration:none;display:inline-block}
+.ncta:hover{filter:brightness(1.06);transform:translateY(-1px);box-shadow:0 4px 22px rgba(202,255,51,0.25)}
+
+/* ── SCARCITY BANNER ── */
+.scar-bar{
+  background:rgba(202,255,51,0.04);
+  border-bottom:1px solid rgba(202,255,51,0.1);
+  padding:11px 6%;text-align:center;margin-top:70px;
+  display:flex;align-items:center;justify-content:center;gap:12px;flex-wrap:wrap;
+}
+.scar-dot{width:7px;height:7px;border-radius:50%;background:var(--lime);box-shadow:0 0 8px var(--lime);animation:pulse 2s ease-in-out infinite;flex-shrink:0}
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:0.25;transform:scale(0.75)}}
+.scar-text{font-family:'Space Grotesk',sans-serif;font-size:0.76rem;font-weight:600;color:var(--muted)}
+.scar-text strong{color:var(--white)}
+.scar-pill{background:rgba(202,255,51,0.08);border:1px solid rgba(202,255,51,0.2);color:var(--lime);font-family:'Space Grotesk',sans-serif;font-size:0.63rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;padding:3px 10px;border-radius:100px}
+
+/* ── HERO ── */
+.hero{
+  min-height:calc(100vh - 110px);display:flex;align-items:center;
+  padding:64px 6% 80px;position:relative;overflow:hidden;
+}
+.hero-bg{position:absolute;inset:0;background:radial-gradient(ellipse 72% 65% at 65% 42%,rgba(202,255,51,0.038) 0%,transparent 58%),radial-gradient(ellipse 52% 52% at 18% 78%,rgba(99,102,241,0.05) 0%,transparent 52%)}
+.hgrid{position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,0.015) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,0.015) 1px,transparent 1px);background-size:64px 64px;pointer-events:none}
+.hgrid::after{content:'';position:absolute;top:48%;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent 5%,rgba(202,255,51,0.05) 35%,rgba(202,255,51,0.05) 65%,transparent 95%)}
+.hero-in{position:relative;z-index:1;display:grid;grid-template-columns:1.15fr 0.85fr;gap:5rem;align-items:center;width:100%;max-width:1300px;margin:0 auto}
+
+/* left copy */
+.badge{display:inline-flex;align-items:center;gap:8px;background:rgba(202,255,51,0.06);border:1px solid rgba(202,255,51,0.15);color:var(--lime);padding:6px 14px;border-radius:100px;font-family:'Space Grotesk',sans-serif;font-size:0.65rem;font-weight:600;letter-spacing:2.5px;text-transform:uppercase;margin-bottom:2rem}
+.badge-dot{display:block;width:6px;height:6px;border-radius:50%;background:var(--lime);box-shadow:0 0 8px var(--lime);animation:pulse 2.5s ease-in-out infinite}
+.h1{font-size:clamp(2.8rem,5.2vw,4.8rem);margin-bottom:1.3rem;color:var(--white)}
+.hl{color:var(--lime)}
+.hl2{color:var(--indigo)}
+.hero-body{color:var(--muted);font-size:0.98rem;line-height:1.85;max-width:530px;margin-bottom:2rem}
+.hero-body strong{color:var(--white);font-weight:500}
+
+.checks{display:flex;flex-direction:column;gap:0.6rem;margin-bottom:2.2rem}
+.ck{display:flex;align-items:center;gap:10px;font-size:0.86rem;color:var(--muted)}
+.ck-ico{width:18px;height:18px;border-radius:50%;background:rgba(202,255,51,0.08);border:1px solid rgba(202,255,51,0.18);display:flex;align-items:center;justify-content:center;color:var(--lime);font-size:0.58rem;font-weight:700;flex-shrink:0}
+
+.hstats{display:flex;gap:2.8rem;flex-wrap:wrap;padding-top:2rem;border-top:1px solid var(--border)}
+.hs-n{font-family:'Space Grotesk',sans-serif;font-size:2.3rem;font-weight:700;color:var(--white);letter-spacing:-0.04em;line-height:1}
+.hs-n span{color:var(--lime)}
+.hs-l{font-size:0.71rem;color:var(--muted);margin-top:4px}
+
+/* ── FORM CARD ── */
+.form-card{background:var(--card);border:1px solid var(--border);border-radius:20px;padding:2.4rem;position:relative;overflow:hidden;box-shadow:0 30px 80px rgba(0,0,0,0.5)}
+.form-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--lime),rgba(202,255,51,0.2))}
+
+.ftag{font-family:'Space Grotesk',sans-serif;font-size:0.62rem;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:var(--lime);margin-bottom:0.35rem}
+.fh{font-family:'Space Grotesk',sans-serif;font-size:1.18rem;font-weight:700;color:var(--white);margin-bottom:0.3rem;line-height:1.2}
+.fs{font-size:0.81rem;color:var(--muted);margin-bottom:1.5rem;line-height:1.55}
+
+/* scarcity inside form */
+.scar-block{background:rgba(202,255,51,0.04);border:1px solid rgba(202,255,51,0.12);border-radius:10px;padding:0.9rem 1rem;margin-bottom:1.4rem;display:flex;align-items:center;gap:10px}
+.scar-msg{font-family:'Space Grotesk',sans-serif;font-size:0.77rem;font-weight:600;color:var(--white);line-height:1.3}
+.scar-msg span{color:var(--lime)}
+.spots-row{display:flex;gap:4px;margin-top:7px}
+.spot{width:18px;height:5px;border-radius:3px}
+.spot.taken{background:rgba(255,255,255,0.06)}
+.spot.avail{background:var(--lime);box-shadow:0 0 6px rgba(202,255,51,0.4)}
+
+/* countdown */
+.countdown{background:rgba(255,255,255,0.02);border:1px solid var(--border);border-radius:10px;padding:0.9rem 1rem;margin-bottom:1.4rem;text-align:center}
+.cd-label{font-family:'Space Grotesk',sans-serif;font-size:0.6rem;font-weight:600;letter-spacing:2.5px;text-transform:uppercase;color:var(--muted);margin-bottom:8px}
+.cd-units{display:flex;align-items:center;justify-content:center;gap:6px}
+.cd-unit{text-align:center}
+.cd-n{font-family:'Space Grotesk',sans-serif;font-size:1.35rem;font-weight:700;color:var(--lime);background:rgba(202,255,51,0.05);border:1px solid rgba(202,255,51,0.1);border-radius:6px;padding:4px 9px;min-width:42px;display:block;letter-spacing:-0.03em}
+.cd-l{font-size:0.55rem;color:var(--muted);margin-top:3px;letter-spacing:1px;text-transform:uppercase}
+.cd-sep{font-family:'Space Grotesk',sans-serif;font-size:1.2rem;font-weight:700;color:var(--subtle);margin:0 2px;padding-bottom:12px;align-self:flex-start;margin-top:3px}
+
+/* form fields */
+.fg{margin-bottom:1rem}
+.fl{display:block;font-family:'Space Grotesk',sans-serif;font-size:0.72rem;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:var(--muted);margin-bottom:6px}
+.fi{width:100%;background:rgba(255,255,255,0.03);border:1px solid var(--border);border-radius:9px;padding:0.9rem 1.05rem;color:var(--white);font-family:'Inter',sans-serif;font-size:0.92rem;outline:none;transition:border-color 0.2s,background 0.2s}
+.fi::placeholder{color:var(--subtle)}
+.fi:focus{border-color:rgba(202,255,51,0.3);background:rgba(202,255,51,0.02)}
+select.fi{-webkit-appearance:none;cursor:pointer}
+select.fi option{background:var(--bg3)}
+
+.fsub{width:100%;font-family:'Space Grotesk',sans-serif;background:var(--lime);color:#09090B;font-size:0.9rem;font-weight:700;letter-spacing:0.2px;padding:1.05rem;border-radius:9px;border:none;cursor:pointer;transition:all 0.2s;margin-top:0.3rem}
+.fsub:hover{filter:brightness(1.06);transform:translateY(-1px);box-shadow:0 4px 32px rgba(202,255,51,0.28)}
+.fnote{display:flex;align-items:center;justify-content:center;gap:6px;font-size:0.68rem;color:var(--muted);margin-top:0.9rem;text-align:center}
+
+/* success */
+.success-msg{display:none;text-align:center;padding:1.5rem 0}
+.success-msg.show{display:block}
+.form-fields.hide{display:none}
+
+/* ── MARQUEE ── */
+.mq{background:var(--lime);padding:13px 0;overflow:hidden}
+.mq-t{display:flex;white-space:nowrap;animation:mscroll 28s linear infinite}
+.mq-t span{font-family:'Space Grotesk',sans-serif;font-size:0.63rem;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:rgba(0,0,0,0.52);padding:0 2.5rem}
+.mq-t span::after{content:'◆';margin-left:2.5rem;opacity:0.18}
+@keyframes mscroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+/* ── TRUST BAR ── */
+.tbar{background:var(--bg2);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:20px 6%;display:flex;align-items:center;justify-content:center;gap:3rem;flex-wrap:wrap}
+.ti{display:flex;align-items:center;gap:9px;font-size:0.76rem;color:var(--muted)}
+.tic{color:var(--lime);font-size:0.9rem}
+
+/* ── SHARED SECTION ── */
+.sec{padding:110px 6%}
+.sec.alt{background:var(--bg2)}
+.sec-in{max-width:1200px;margin:0 auto}
+.tag{display:inline-flex;align-items:center;gap:9px;font-family:'Space Grotesk',sans-serif;font-size:0.66rem;font-weight:600;letter-spacing:3.5px;text-transform:uppercase;color:var(--lime);margin-bottom:1rem}
+.tag::before{content:'';display:block;width:18px;height:1.5px;background:var(--lime)}
+.h2{font-size:clamp(2rem,3.8vw,3.4rem);margin-bottom:1.2rem;color:var(--white)}
+.body{color:var(--muted);font-size:0.97rem;line-height:1.85;max-width:560px}
+.body strong{color:var(--white);font-weight:500}
+.ctr{text-align:center}.ctr .body{margin:0 auto}.ctr .tag{justify-content:center}
+
+/* ── WHAT YOU GET CARDS ── */
+.wyg-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem;margin-top:3.5rem}
+.wyg-card{background:var(--card);border:1px solid var(--border);border-radius:18px;padding:2rem;transition:transform 0.3s cubic-bezier(0.22,1,0.36,1),border-color 0.3s;position:relative;overflow:hidden}
+.wyg-card::after{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--lime),transparent);opacity:0.5;transition:opacity 0.3s}
+.wyg-card:hover{transform:translateY(-4px);border-color:var(--borderHover)}
+.wyg-card:hover::after{opacity:1}
+.wyg-label{display:inline-flex;align-items:center;gap:5px;background:rgba(202,255,51,0.07);border:1px solid rgba(202,255,51,0.14);color:var(--lime);font-family:'Space Grotesk',sans-serif;font-size:0.59rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:3px 9px;border-radius:5px;margin-bottom:1rem}
+.wyg-icon{font-size:1.9rem;margin-bottom:0.9rem;display:block}
+.wyg-card h3{font-family:'Space Grotesk',sans-serif;font-size:1.02rem;font-weight:700;color:var(--white);margin-bottom:0.45rem}
+.wyg-card p{color:var(--muted);font-size:0.84rem;line-height:1.78}
+
+/* ── RESULTS ── */
+.rg{display:grid;grid-template-columns:repeat(4,1fr);gap:1.2rem;margin-top:3.5rem}
+.rc{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:2rem;text-align:center;transition:all 0.3s;position:relative;overflow:hidden}
+.rc:hover{transform:translateY(-4px);border-color:var(--borderHover)}
+.rc::after{content:'';position:absolute;bottom:0;left:10%;right:10%;height:1px;background:linear-gradient(90deg,transparent,var(--lime),transparent);opacity:0;transition:opacity 0.3s}
+.rc:hover::after{opacity:0.5}
+.rc-cat{font-family:'Space Grotesk',sans-serif;font-size:0.6rem;font-weight:600;letter-spacing:2.5px;text-transform:uppercase;color:var(--indigo);margin-bottom:0.7rem}
+.rc-n{font-family:'Space Grotesk',sans-serif;font-size:3.2rem;font-weight:700;letter-spacing:-0.04em;color:var(--lime);line-height:1;margin-bottom:0.4rem}
+.rc-l{font-size:0.79rem;color:var(--muted);line-height:1.55}
+
+/* ── TESTIMONIALS ── */
+.tg{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem;margin-top:3.5rem}
+.tc{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:2rem;transition:all 0.3s;position:relative;overflow:hidden;display:flex;flex-direction:column}
+.tc::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--lime),transparent);opacity:0.4;border-radius:16px 16px 0 0}
+.tc:hover{transform:translateY(-3px);border-color:var(--borderHover)}
+.stars{color:#FACC15;font-size:0.82rem;letter-spacing:2px;margin-bottom:0.9rem}
+.tc-t{font-size:0.87rem;color:var(--muted);line-height:1.85;font-style:italic;margin-bottom:1.4rem;flex:1}
+.tc-t strong{color:var(--lime);font-style:normal}
+.tc-a{display:flex;align-items:center;gap:10px}
+.tc-av{width:38px;height:38px;border-radius:50%;background:linear-gradient(135deg,var(--lime),#9FFF00);display:flex;align-items:center;justify-content:center;color:#09090B;font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:0.75rem;flex-shrink:0}
+.tc-n{font-family:'Space Grotesk',sans-serif;font-size:0.86rem;font-weight:700;color:var(--white)}
+.tc-r{font-size:0.7rem;color:var(--muted);margin-top:1px}
+
+/* ── PROCESS STRIP ── */
+.proc-strip{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border:1px solid var(--border);border-radius:16px;overflow:hidden;margin-top:3.5rem}
+.ps{padding:2.2rem 1.8rem;background:var(--card);border-right:1px solid var(--border);position:relative;transition:background 0.25s}
+.ps:last-child{border-right:none}
+.ps:hover{background:var(--bg3)}
+.ps::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--lime),transparent);opacity:0;transition:opacity 0.25s}
+.ps:hover::before{opacity:1}
+.ps-n{font-family:'Space Grotesk',sans-serif;font-size:2.8rem;font-weight:700;color:rgba(202,255,51,0.07);line-height:1;margin-bottom:0.9rem;letter-spacing:-0.04em}
+.ps h3{font-family:'Space Grotesk',sans-serif;font-size:0.92rem;font-weight:700;color:var(--white);margin-bottom:0.4rem}
+.ps p{font-size:0.79rem;color:var(--muted);line-height:1.72}
+
+/* ── SUPPORT PLANS ── */
+.sp-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1.2rem;margin-top:3.5rem;align-items:start;max-width:800px;margin-left:auto;margin-right:auto}
+.sp-card{background:var(--card);border:1px solid var(--border);border-radius:18px;padding:2rem;position:relative;overflow:hidden;transition:border-color 0.3s,transform 0.3s}
+.sp-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--lime),transparent);opacity:0.5}
+.sp-card:hover{border-color:var(--borderHover);transform:translateY(-4px)}
+.sp-card.featured{border-color:rgba(202,255,51,0.2);background:linear-gradient(150deg,rgba(202,255,51,0.05),rgba(202,255,51,0.01))}
+.sp-card.featured::before{opacity:1}
+.sp-badge-feat{display:inline-flex;align-items:center;background:var(--lime);color:#09090B;font-family:'Space Grotesk',sans-serif;font-size:0.62rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;padding:3px 10px;border-radius:5px;margin-bottom:1.1rem}
+.sp-top{margin-bottom:1.5rem}
+.sp-name{font-family:'Space Grotesk',sans-serif;font-size:1.2rem;font-weight:700;color:var(--white);margin-bottom:0.4rem}
+.sp-desc{font-size:0.84rem;color:var(--muted);line-height:1.7}
+.sp-list{list-style:none;display:flex;flex-direction:column;gap:0.6rem;margin-bottom:1.8rem}
+.sp-list li{display:flex;align-items:flex-start;gap:10px;font-size:0.84rem;color:var(--muted);line-height:1.5}
+.sp-ck{color:var(--lime);font-size:0.65rem;font-weight:700;flex-shrink:0;margin-top:2px}
+.sp-cta{display:inline-flex;align-items:center;gap:7px;font-family:'Space Grotesk',sans-serif;font-size:0.82rem;font-weight:700;color:var(--lime);background:none;border:none;cursor:pointer;padding:0;text-decoration:none;transition:gap 0.2s}
+.sp-cta:hover{gap:11px}
+
+/* ── FAQ ── */
+.faq-list{display:flex;flex-direction:column;border:1px solid var(--border);border-radius:16px;overflow:hidden;margin-top:3.5rem;max-width:820px;margin-left:auto;margin-right:auto}
+.faq-item{border-bottom:1px solid var(--border)}
+.faq-item:last-child{border-bottom:none}
+.faq-q{width:100%;background:none;border:none;padding:1.4rem 2rem;display:flex;align-items:center;justify-content:space-between;gap:1rem;cursor:pointer;text-align:left;transition:background 0.2s}
+.faq-q:hover{background:rgba(255,255,255,0.02)}
+.faq-q-text{font-family:'Space Grotesk',sans-serif;font-size:0.95rem;font-weight:600;color:var(--white)}
+.faq-icon{width:24px;height:24px;border-radius:50%;background:rgba(202,255,51,0.06);border:1px solid rgba(202,255,51,0.14);display:flex;align-items:center;justify-content:center;color:var(--lime);font-size:1rem;font-weight:700;flex-shrink:0;transition:transform 0.25s,background 0.25s;line-height:1}
+.faq-item.open .faq-icon{transform:rotate(45deg);background:rgba(202,255,51,0.1)}
+.faq-a{max-height:0;overflow:hidden;transition:max-height 0.35s cubic-bezier(0.22,1,0.36,1)}
+.faq-item.open .faq-a{max-height:300px}
+.faq-a-in{padding:0 2rem 1.5rem;color:var(--muted);font-size:0.88rem;line-height:1.82}
+
+/* ── FINAL CTA ── */
+.final-cta{padding:110px 6%;text-align:center;position:relative;overflow:hidden;background:var(--bg)}
+.final-cta::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 70% 60% at 50% 50%,rgba(202,255,51,0.035) 0%,transparent 62%)}
+.final-in{position:relative;z-index:1;max-width:700px;margin:0 auto}
+
+.cta-card{background:linear-gradient(150deg,rgba(202,255,51,0.05),rgba(202,255,51,0.01));border:1px solid rgba(202,255,51,0.12);border-radius:24px;padding:3.5rem;margin-top:3rem;position:relative;overflow:hidden}
+.cta-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--lime),rgba(202,255,51,0.2))}
+.spot-row{display:flex;align-items:center;justify-content:center;gap:10px;margin-bottom:1.8rem}
+.spot-ind{display:flex;gap:5px}
+.spot-ind .s{width:26px;height:7px;border-radius:4px}
+.spot-ind .s.t{background:rgba(255,255,255,0.06)}
+.spot-ind .s.a{background:var(--lime);box-shadow:0 0 8px rgba(202,255,51,0.4)}
+.spot-lbl{font-family:'Space Grotesk',sans-serif;font-size:0.76rem;font-weight:600;color:var(--muted)}
+.spot-lbl strong{color:var(--lime)}
+
+/* buttons */
+.bp{display:inline-flex;align-items:center;gap:8px;font-family:'Space Grotesk',sans-serif;background:var(--lime);color:#09090B;font-size:0.85rem;font-weight:700;letter-spacing:0.2px;padding:0.95rem 2rem;border-radius:9px;border:none;cursor:pointer;transition:all 0.22s;text-decoration:none}
+.bp:hover{filter:brightness(1.06);transform:translateY(-2px);box-shadow:0 6px 36px rgba(202,255,51,0.28)}
+.bo{display:inline-flex;align-items:center;gap:8px;font-family:'Space Grotesk',sans-serif;background:transparent;color:var(--white);border:1px solid var(--border);font-size:0.85rem;font-weight:600;padding:0.95rem 2rem;border-radius:9px;cursor:pointer;transition:all 0.22s;text-decoration:none}
+.bo:hover{border-color:var(--lime);color:var(--lime)}
+
+/* ── STICKY BAR ── */
+.sticky{
+  position:fixed;bottom:0;left:0;right:0;z-index:400;
+  background:rgba(14,14,20,0.97);backdrop-filter:blur(20px);
+  border-top:1px solid var(--border);
+  padding:13px 6%;
+  display:flex;align-items:center;justify-content:space-between;gap:1rem;flex-wrap:wrap;
+  transform:translateY(100%);transition:transform 0.4s cubic-bezier(0.22,1,0.36,1);
+}
+.sticky.show{transform:translateY(0)}
+.sticky-l strong{font-family:'Space Grotesk',sans-serif;font-size:0.9rem;font-weight:700;color:var(--white);display:block}
+.sticky-l span{font-size:0.76rem;color:var(--muted)}
+.sticky-l span em{color:var(--lime);font-style:normal;font-weight:600}
+
+/* ── FOOTER ── */
+footer{background:#040406;border-top:1px solid var(--border);padding:2rem 6%;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem}
+footer p{font-size:0.74rem;color:var(--subtle)}
+footer a{color:var(--muted);font-size:0.74rem;text-decoration:none;transition:color 0.2s}
+footer a:hover{color:var(--lime)}
+
+/* ── REVEAL ── */
+.rv{opacity:0;transform:translateY(20px);transition:opacity 0.6s cubic-bezier(0.22,1,0.36,1),transform 0.6s cubic-bezier(0.22,1,0.36,1)}
+.rv.vx{opacity:1;transform:none}
+.rv.d1{transition-delay:0.08s}.rv.d2{transition-delay:0.14s}.rv.d3{transition-delay:0.2s}.rv.d4{transition-delay:0.26s}
+
+/* ── RESPONSIVE ── */
+@media(max-width:1100px){
+  .hero-in{grid-template-columns:1fr;gap:3rem}
+  .rg{grid-template-columns:repeat(2,1fr)}
+  .tg{grid-template-columns:1fr}
+  .wyg-grid{grid-template-columns:1fr 1fr}
+  .proc-strip{grid-template-columns:1fr 1fr}
+  .sp-grid{grid-template-columns:1fr}
+}
+@media(max-width:768px){
+  .hero{padding:44px 5% 56px;min-height:auto}
+  .hero-body{max-width:100%;font-size:0.93rem}
+  .sec{padding:64px 5%}
+  .final-cta{padding:64px 5%}
+  .wyg-grid,.rg{grid-template-columns:1fr}
+  .proc-strip{grid-template-columns:1fr 1fr}
+  .nav-phone{display:none}
+  .tbar{gap:1.2rem;padding:18px 5%;justify-content:flex-start}
+  .cta-card{padding:2rem 1.5rem}
+  .hstats{display:grid;grid-template-columns:1fr 1fr;gap:1.2rem}
+  .form-card{padding:1.8rem 1.4rem}
+  .faq-q{padding:1.1rem 1.3rem}
+  .faq-a-in{padding:0 1.3rem 1.2rem}
+  .spot-ind .s{width:18px;height:6px}
+  .rc-n{font-size:2.5rem}
+  footer{flex-direction:column;gap:0.8rem}
+}
+@media(max-width:480px){
+  .hero{padding:32px 5% 44px}
+  .h1{font-size:clamp(2rem,9vw,2.6rem)}
+  .h2{font-size:clamp(1.7rem,7vw,2.2rem)}
+  .sec{padding:50px 5%}
+  .final-cta{padding:50px 5%}
+  .proc-strip{grid-template-columns:1fr}
+  .hstats{grid-template-columns:1fr 1fr;gap:0.9rem}
+  .hs-n{font-size:1.9rem}
+  .tbar{flex-direction:column;align-items:flex-start;gap:0.75rem}
+  .cta-card{padding:1.6rem 1.1rem}
+  .form-card{padding:1.4rem 1.1rem}
+  .spot-ind{flex-wrap:wrap;max-width:180px}
+  .spot-ind .s{width:14px;height:5px}
+  .spot-lbl{font-size:0.7rem}
+  .sticky{flex-direction:column;align-items:center;text-align:center;padding:12px 5%;gap:0.7rem}
+  .sticky-l{text-align:center}
+  .sticky .bp{width:100%;justify-content:center}
+  .scar-pill{display:none}
+  .badge{font-size:0.58rem;padding:5px 10px}
+  .checks{gap:0.45rem}
+  .mq-t span{padding:0 1.5rem;font-size:0.58rem}
+  .tg{grid-template-columns:1fr}
+  .faq-q{padding:1rem 1rem}
+  .faq-a-in{padding:0 1rem 1rem}
+  .bo{display:none}
+}
+</style>
+</head>
+<body>
+
+<!-- ── NAV ── -->
+<nav id="nav">
+  <a href="https://surgelab.co.uk" class="nl" target="_blank">
+    <img src="surgelab_logo_transparent_hires.png" alt="Surge Lab"/>
+  </a>
+  <div class="nav-right">
+    <p class="nav-phone">Questions? <a href="tel:+447700000000">Call us free</a></p>
+    <a href="#audit-form" class="ncta" onclick="scrollForm(event)">Get Free Audit →</a>
+  </div>
+</nav>
+
+<!-- ── SCARCITY BANNER ── -->
+<div class="scar-bar">
+  <div class="scar-dot"></div>
+  <p class="scar-text"><strong>Only 6 onboarding spots left in April</strong> — we cap new clients each month to protect results quality</p>
+  <span class="scar-pill">Limited Availability</span>
+</div>
+
+<!-- ── HERO ── -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hgrid"></div>
+  <div class="hero-in">
+
+    <!-- LEFT -->
+    <div>
+      <div class="badge rv"><span class="badge-dot"></span>Bespoke Web Design &amp; SEO</div>
+      <h1 class="h1 rv d1">A Website That<br><span class="hl">Actually Ranks.</span><br>And Actually Converts.</h1>
+      <p class="hero-body rv d2">Most websites look fine and rank nowhere. Ours are <strong>coded from scratch in pure HTML, CSS &amp; JS</strong> — faster, leaner, and built to rank. We'll start by auditing your current site: <strong>how it performs on Google, where it ranks, and exactly what's holding it back.</strong></p>
+
+      <div class="checks rv d2">
+        <div class="ck"><span class="ck-ico">✓</span>97+ Google PageSpeed — every site we build</div>
+        <div class="ck"><span class="ck-ico">✓</span>Built to rank — SEO embedded from the first line of code</div>
+        <div class="ck"><span class="ck-ico">✓</span>Zero WordPress, zero plugins, zero monthly platform fees</div>
+        <div class="ck"><span class="ck-ico">✓</span>Conversion-optimised from the ground up — not bolted on after</div>
+      </div>
+
+      <div class="hstats rv d3">
+        <div>
+          <div class="hs-n">97<span>+</span></div>
+          <div class="hs-l">PageSpeed score</div>
+        </div>
+        <div>
+          <div class="hs-n">7<span>days</span></div>
+          <div class="hs-l">Turnaround</div>
+        </div>
+        <div>
+          <div class="hs-n">4.8<span>×</span></div>
+          <div class="hs-l">Avg. conversion uplift</div>
+        </div>
+        <div>
+          <div class="hs-n">£0</div>
+          <div class="hs-l">Monthly platform fees</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- RIGHT: FORM -->
+    <div id="audit-form" class="rv d2">
+      <div class="form-card">
+        <p class="ftag">Free Website Audit</p>
+        <h2 class="fh">Get Your Free Website &amp; SEO Audit</h2>
+        <p class="fs">We run your site through Google's own tools — checking your PageSpeed score, where you currently rank for your target keywords, and how much traffic you're losing as a result. You'll get the full picture, free, before we talk about anything else.</p>
+
+        <div class="scar-block">
+          <div class="scar-dot"></div>
+          <div>
+            <p class="scar-msg">Only <span>6 spots remaining</span> in April</p>
+            <div class="spots-row">
+              <div class="spot taken"></div><div class="spot taken"></div>
+              <div class="spot taken"></div><div class="spot taken"></div>
+              <div class="spot taken"></div><div class="spot taken"></div>
+              <div class="spot avail"></div><div class="spot avail"></div>
+              <div class="spot avail"></div><div class="spot avail"></div>
+              <div class="spot avail"></div><div class="spot avail"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="countdown">
+          <div class="cd-label">Offer closes end of April</div>
+          <div class="cd-units">
+            <div class="cd-unit"><span class="cd-n" id="cd-d">09</span><div class="cd-l">Days</div></div>
+            <span class="cd-sep">:</span>
+            <div class="cd-unit"><span class="cd-n" id="cd-h">00</span><div class="cd-l">Hrs</div></div>
+            <span class="cd-sep">:</span>
+            <div class="cd-unit"><span class="cd-n" id="cd-m">00</span><div class="cd-l">Min</div></div>
+            <span class="cd-sep">:</span>
+            <div class="cd-unit"><span class="cd-n" id="cd-s">00</span><div class="cd-l">Sec</div></div>
+          </div>
+        </div>
+
+        <div class="form-fields">
+          <div class="fg">
+            <label class="fl" for="f-name">Your Name</label>
+            <input class="fi" type="text" id="f-name" placeholder="John Smith" autocomplete="name" required/>
+          </div>
+          <div class="fg">
+            <label class="fl" for="f-email">Email Address</label>
+            <input class="fi" type="email" id="f-email" placeholder="you@company.com" autocomplete="email" required/>
+          </div>
+          <div class="fg">
+            <label class="fl" for="f-phone">Phone Number</label>
+            <input class="fi" type="tel" id="f-phone" placeholder="07700 000000" autocomplete="tel" required/>
+          </div>
+          <div class="fg">
+            <label class="fl" for="f-svc">Current website situation</label>
+            <select class="fi" id="f-svc" required>
+              <option value="">Select an option</option>
+              <option value="no-site">I don't have a website yet</option>
+              <option value="wp">I'm on WordPress / Wix / Squarespace</option>
+              <option value="custom">I have a custom site but it's not ranking</option>
+              <option value="redesign">I need a full redesign</option>
+            </select>
+          </div>
+          <button class="fsub" type="button" onclick="submitForm()">Get My Free Site Audit →</button>
+          <p class="fnote">
+            <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#6B7280" stroke-width="2.5"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+            No spam. No obligation. 100% free.
+          </p>
+        </div>
+
+        <div class="success-msg" id="success">
+          <div style="font-size:2.5rem;margin-bottom:0.8rem">🎉</div>
+          <h3 style="font-family:'Space Grotesk',sans-serif;font-size:1.15rem;font-weight:700;color:var(--white);margin-bottom:0.5rem">You're in — check your inbox.</h3>
+          <p style="font-size:0.84rem;color:var(--muted);line-height:1.72">We'll review your business and send a personalised growth plan within <strong style="color:var(--white)">2 hours</strong>.</p>
+          <a href="tel:+447700000000" style="display:inline-flex;align-items:center;gap:7px;margin-top:1.2rem;font-family:'Space Grotesk',sans-serif;font-size:0.82rem;font-weight:600;color:var(--lime)">📞 Skip the queue — call us directly →</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ── MARQUEE ── -->
+<div class="mq">
+  <div class="mq-t" aria-hidden="true">
+    <span>Bespoke Web Design</span><span>Pure HTML / CSS / JS</span><span>SEO &amp; Rankings</span><span>97+ PageSpeed</span><span>No WordPress</span><span>Higher Google Rankings</span><span>Conversion Optimised</span><span>Bespoke Web Design</span><span>Pure HTML / CSS / JS</span><span>SEO &amp; Rankings</span><span>97+ PageSpeed</span><span>No WordPress</span><span>Higher Google Rankings</span><span>Conversion Optimised</span>
+  </div>
+</div>
+
+<!-- ── TRUST BAR ── -->
+<div class="tbar">
+  <div class="ti"><span class="tic">✓</span>Coded — zero page builders</div>
+  <div class="ti"><span class="tic">✓</span>97+ Google PageSpeed scores</div>
+  <div class="ti"><span class="tic">✓</span>No monthly platform fees</div>
+  <div class="ti"><span class="tic">✓</span>SEO built in from day one</div>
+  <div class="ti"><span class="tic">✓</span>Reply within 2 hours</div>
+</div>
+
+<!-- ── WHAT YOU GET ── -->
+<section class="sec">
+  <div class="sec-in">
+    <div class="ctr">
+      <p class="tag rv">What's Included</p>
+      <h2 class="h2 rv d1">What We Find in Your <span class="hl">Free Site Audit</span></h2>
+      <p class="body rv d2">Before we talk about building anything, we audit what you've already got. We check your Google performance, your current rankings, your site speed, and what your competitors are doing better — then show you the full picture in plain English.</p>
+    </div>
+    <div class="wyg-grid">
+      <div class="wyg-card rv d1">
+        <span class="wyg-label">Included Free</span>
+        <span class="wyg-icon">📍</span>
+        <h3>Where You Currently Rank on Google</h3>
+        <p>We pull your exact ranking positions for the keywords your customers are searching. You'll see which terms you appear for, which page you're on, and how far off Page 1 you are — with a clear view of the gap between you and whoever's sitting at the top.</p>
+      </div>
+      <div class="wyg-card rv d2">
+        <span class="wyg-label">Included Free</span>
+        <span class="wyg-icon">⚡</span>
+        <h3>Your Site's Google Performance Score</h3>
+        <p>We run your site through Google PageSpeed Insights and Core Web Vitals — the exact tools Google uses to decide how fast to rank you. Most sites on WordPress or Wix score 30–65. We'll show you your real number and what it's costing you in rankings and traffic.</p>
+      </div>
+      <div class="wyg-card rv d3">
+        <span class="wyg-label">Included Free</span>
+        <span class="wyg-icon">📉</span>
+        <h3>How Much Traffic You're Losing</h3>
+        <p>Based on your rankings and PageSpeed score, we calculate an estimate of how many visitors per month your site is failing to attract — and what that traffic would be worth in leads and revenue if you were ranking where you should be.</p>
+      </div>
+      <div class="wyg-card rv d1">
+        <span class="wyg-label">Included Free</span>
+        <span class="wyg-icon">🏆</span>
+        <h3>Competitor Site Teardown</h3>
+        <p>We pull apart your top 3 competitors' websites — their code quality, PageSpeed, keyword strategy and content structure — so you know exactly where the gap is and how to close it.</p>
+      </div>
+      <div class="wyg-card rv d2">
+        <span class="wyg-label">Included Free</span>
+        <span class="wyg-icon">🛠️</span>
+        <h3>Technical Health Check</h3>
+        <p>Broken links, crawl errors, missing schema, bloated plugins, uncompressed images — we document every issue dragging your site down in Google's eyes.</p>
+      </div>
+      <div class="wyg-card rv d3">
+        <span class="wyg-label">No Obligation</span>
+        <span class="wyg-icon">🗺️</span>
+        <h3>Custom Rebuild Roadmap</h3>
+        <p>We present a clear plan showing exactly what a coded rebuild would deliver — projected rankings, speed improvements and conversion uplift. No pitch, just data.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── RESULTS ── -->
+<section class="sec alt">
+  <div class="sec-in">
+    <div class="ctr">
+      <p class="tag rv">Proven Track Record</p>
+      <h2 class="h2 rv d1">Numbers That <span class="hl">Don't Lie</span></h2>
+      <p class="body rv d2">Every number below is pulled from real client results — tracked, verified, repeatable. This is what pure coded web design actually delivers.</p>
+    </div>
+    <div class="rg">
+      <div class="rc rv d1">
+        <div class="rc-cat">Performance</div>
+        <div class="rc-n">97+</div>
+        <div class="rc-l">Google PageSpeed score — every single coded site we build</div>
+      </div>
+      <div class="rc rv d2">
+        <div class="rc-cat">SEO</div>
+        <div class="rc-n">↑↑↑</div>
+        <div class="rc-l">Consistent ranking improvements across every site we build — tracked and reported monthly</div>
+      </div>
+      <div class="rc rv d3">
+        <div class="rc-cat">Conversion</div>
+        <div class="rc-n">4.8×</div>
+        <div class="rc-l">Average conversion rate uplift vs clients' previous website</div>
+      </div>
+      <div class="rc rv d4">
+        <div class="rc-cat">Savings</div>
+        <div class="rc-n">£0</div>
+        <div class="rc-l">Monthly platform fees — no WordPress licences, no plugin subscriptions, ever</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── TESTIMONIALS ── -->
+<section class="sec">
+  <div class="sec-in">
+    <div class="ctr">
+      <p class="tag rv">Client Results</p>
+      <h2 class="h2 rv d1">What Our Clients <span class="hl">Actually Say</span></h2>
+      <p class="body rv d2">We let results do the talking. Here's what UK businesses just like yours have achieved after working with Surge Lab.</p>
+    </div>
+    <div class="tg">
+      <div class="tc rv d1">
+        <div class="stars">★★★★★</div>
+        <p class="tc-t">"I'd been through two web designers before Surge Lab and both times I ended up with something that looked fine but did nothing for my business. This time it's completely different — the site actually feels like me, it loads instantly, and people are finding me on Google who never would've before. Can't ask for more than that."</p>
+        <div class="tc-a">
+          <div class="tc-av">CS</div>
+          <div><div class="tc-n">Colin</div><div class="tc-r">colinscotland.com</div></div>
+        </div>
+      </div>
+      <div class="tc rv d2">
+        <div class="stars">★★★★★</div>
+        <p class="tc-t">"Honestly I wasn't sure what to expect. I'm an accountant, not a tech person, and I just needed something that worked and didn't make me look amateur. They kept it simple, built exactly what we discussed, and I've had proper enquiries through it ever since. No drama, no jargon — just sorted it."</p>
+        <div class="tc-a">
+          <div class="tc-av">SA</div>
+          <div><div class="tc-n">Sam</div><div class="tc-r">samtheaccountant.co.uk</div></div>
+        </div>
+      </div>
+      <div class="tc rv d3">
+        <div class="stars">★★★★★</div>
+        <p class="tc-t">"With joinery you live or die on how your work looks — and the old site just wasn't doing it justice. Surge Lab built us something that actually shows off what we do. It loads fast, looks sharp on mobile, and we're getting calls from people who found us on Google. That never really happened before."</p>
+        <div class="tc-a">
+          <div class="tc-av">KM</div>
+          <div><div class="tc-n">Kristan</div><div class="tc-r">misurajoinery.com</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── PROCESS ── -->
+<section class="sec alt">
+  <div class="sec-in">
+    <div class="ctr">
+      <p class="tag rv">How We Work</p>
+      <h2 class="h2 rv d1">From Audit to <span class="hl">Live Site</span> in 4 Steps</h2>
+      <p class="body rv d2">No lengthy back-and-forth. No surprise costs. A clear process from the moment you apply to the day your site goes live and starts ranking.</p>
+    </div>
+    <div class="proc-strip rv d1">
+      <div class="ps">
+        <div class="ps-n">01</div>
+        <h3>Free Site Audit</h3>
+        <p>We tear apart your current site — speed, SEO, conversions, competitors — and present the findings in a 30-minute call. No obligation to go further.</p>
+      </div>
+      <div class="ps">
+        <div class="ps-n">02</div>
+        <h3>Scope &amp; Strategy</h3>
+        <p>We map every page, every keyword target and every conversion goal before we write a line of code. You see the blueprint before we build.</p>
+      </div>
+      <div class="ps">
+        <div class="ps-n">03</div>
+        <h3>Code &amp; Launch</h3>
+        <p>Pure HTML, CSS and JS — written from scratch for your business. We turn sites around in as little as 7 days. No templates, no drag-and-drop, no compromise.</p>
+      </div>
+      <div class="ps">
+        <div class="ps-n">04</div>
+        <h3>Rank &amp; Convert</h3>
+        <p>Your site is built to rank from day one — technical SEO embedded throughout. We monitor, refine and iterate until the traffic and leads are compounding.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── SUPPORT PLANS ── -->
+<section class="sec">
+  <div class="sec-in">
+    <div class="ctr">
+      <p class="tag rv">Ongoing Support</p>
+      <h2 class="h2 rv d1">We Don't Just Build It <span class="hl">and Disappear.</span></h2>
+      <p class="body rv d2">A website isn't a one-time job — Google's standards shift, performance degrades over time and SEO needs constant attention to compound. Our support plans keep everything running at full speed, month after month.</p>
+    </div>
+
+    <div class="sp-grid rv d1">
+
+      <div class="sp-card">
+        <div class="sp-top">
+          <p class="sp-name">Essentials</p>
+          <p class="sp-desc">Keep your site healthy and performing — nothing falls through the cracks.</p>
+        </div>
+        <ul class="sp-list">
+          <li><span class="sp-ck">✓</span>Monthly PageSpeed &amp; Core Web Vitals monitoring</li>
+          <li><span class="sp-ck">✓</span>Uptime monitoring — we're alerted if your site goes down</li>
+          <li><span class="sp-ck">✓</span>Minor content updates (text, images, links)</li>
+          <li><span class="sp-ck">✓</span>Monthly performance report</li>
+        </ul>
+        <a href="#audit-form" class="sp-cta" onclick="scrollForm(event)">Get Started →</a>
+      </div>
+
+      <div class="sp-card featured">
+        <div class="sp-badge-feat">Most Popular</div>
+        <div class="sp-top">
+          <p class="sp-name">Growth</p>
+          <p class="sp-desc">Active SEO management and continuous improvement — your site gets better every month.</p>
+        </div>
+        <ul class="sp-list">
+          <li><span class="sp-ck">✓</span>Everything in Essentials</li>
+          <li><span class="sp-ck">✓</span>Monthly keyword ranking tracking &amp; reporting</li>
+          <li><span class="sp-ck">✓</span>On-page SEO updates — meta, headings, schema, internal links</li>
+          <li><span class="sp-ck">✓</span>One new SEO-optimised page or blog post per month</li>
+          <li><span class="sp-ck">✓</span>Competitor ranking monitoring</li>
+          <li><span class="sp-ck">✓</span>Quarterly strategy review call</li>
+        </ul>
+        <a href="#audit-form" class="sp-cta" onclick="scrollForm(event)">Get Started →</a>
+      </div>
+
+    </div>
+    <p class="rv" style="text-align:center;font-size:0.8rem;color:var(--muted);margin-top:2rem">All plans are monthly rolling — no lock-in. Pricing discussed during your free audit.</p>
+    <p class="rv" style="text-align:center;margin-top:1.2rem"><a href="https://surgelab.co.uk" target="_blank" style="color:var(--lime);font-size:0.85rem;font-family:'Space Grotesk',sans-serif;font-weight:600;text-decoration:none;border-bottom:1px solid rgba(202,255,51,0.3);padding-bottom:2px;transition:border-color 0.2s" onmouseover="this.style.borderColor='rgba(202,255,51,0.8)'" onmouseout="this.style.borderColor='rgba(202,255,51,0.3)'">← Visit the Surge Lab main site</a></p>
+  </div>
+</section>
+
+<!-- ── FAQ ── -->
+<section class="sec">
+  <div class="sec-in">
+    <div class="ctr">
+      <p class="tag rv">FAQs</p>
+      <h2 class="h2 rv d1">Questions <span class="hl">Answered</span></h2>
+    </div>
+    <div class="faq-list rv d1">
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          <span class="faq-q-text">Why coded? Why not just use WordPress?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-a"><div class="faq-a-in">WordPress sites are built on thousands of lines of code you didn't ask for. That means slower page loads, plugin vulnerabilities, monthly fees and a ceiling on how fast Google will rank you. Our sites are written from scratch — every line intentional. The result: 95–100 PageSpeed scores, zero plugin risk and a structural SEO advantage your competitors on WordPress simply can't match.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          <span class="faq-q-text">How much does a bespoke coded website cost?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-a"><div class="faq-a-in">Every project is scoped individually — a 5-page service site is a very different build to a 30-page e-commerce platform. We don't quote blind. The free audit lets us understand exactly what you need, and we'll give you a detailed, transparent quote with no hidden costs before you commit to anything.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          <span class="faq-q-text">How long does it take to build and launch?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-a"><div class="faq-a-in">We turn sites around in as little as 7 days. More complex builds take longer but we always give you a clear timeline upfront and hold to it — no vague "it'll be ready when it's ready" timelines.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          <span class="faq-q-text">Will my site actually rank on Google?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-a"><div class="faq-a-in">SEO is baked into every site we build — structured data, canonical tags, semantic HTML, optimised meta, Core Web Vitals compliance and keyword-mapped content architecture. We don't treat SEO as an add-on. Most clients see first Page 1 rankings within 90 days. We'll show you the keyword targets and projected timeline during your audit.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          <span class="faq-q-text">Can I update the site myself after it's built?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-a"><div class="faq-a-in">Yes. We build a simple content management layer where needed, or we handle updates for you under a maintenance retainer — typically far cheaper than WordPress agency retainers because there are no plugins to manage or security patches to apply. We'll cover both options during the audit call.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          <span class="faq-q-text">Do you work with businesses across the UK?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-a"><div class="faq-a-in">Yes — while based in Manchester, we work with ambitious businesses across the UK. All audits, strategy sessions and reviews are conducted remotely. Location has never been a barrier to results.</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── FINAL CTA ── -->
+<section class="final-cta">
+  <div class="final-in">
+    <p class="tag rv" style="justify-content:center;display:inline-flex">Last Chance</p>
+    <h2 class="h2 rv d1">Your Competitors Are <span class="hl2">Already Moving.</span></h2>
+    <p class="body rv d2" style="margin:0 auto">Every week you wait is another week they pull further ahead on Google and pay less per customer. Claim your spot before April closes.</p>
+    <div class="cta-card rv d2">
+      <div class="spot-row">
+        <div class="spot-ind">
+          <div class="s t"></div><div class="s t"></div><div class="s t"></div>
+          <div class="s t"></div><div class="s t"></div><div class="s t"></div>
+          <div class="s a"></div><div class="s a"></div><div class="s a"></div>
+          <div class="s a"></div><div class="s a"></div><div class="s a"></div>
+        </div>
+        <span class="spot-lbl"><strong>6 spots</strong> still available in April</span>
+      </div>
+      <h3 style="font-family:'Space Grotesk',sans-serif;font-size:1.5rem;font-weight:700;color:var(--white);margin-bottom:0.55rem;letter-spacing:-0.02em">Get Your Free Website &amp; SEO Audit</h3>
+      <p style="color:var(--muted);font-size:0.88rem;line-height:1.75;margin-bottom:2rem">60 seconds to apply. We'll send a personalised site audit within 2 hours — speed scores, ranking gaps, competitor analysis, the lot.</p>
+      <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap">
+        <a href="#audit-form" class="bp" onclick="scrollForm(event)">Claim My Free Audit →</a>
+        <a href="tel:+447700000000" class="bo">📞 Call Us Instead</a>
+      </div>
+      <p style="font-size:0.71rem;color:var(--subtle);margin-top:1.5rem">No credit card. No contract. No pushy sales calls.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ── FOOTER ── -->
+<footer>
+  <p>© 2026 Surge Lab Ltd · Manchester, UK · <a href="mailto:info@surgelab.co.uk">info@surgelab.co.uk</a></p>
+  <div style="display:flex;gap:1.5rem">
+    <a href="https://surgelab.co.uk/privacy" target="_blank">Privacy</a>
+    <a href="https://surgelab.co.uk" target="_blank">Main Site</a>
+  </div>
+</footer>
+
+<!-- ── STICKY BAR ── -->
+<div class="sticky" id="sticky">
+  <div class="sticky-l">
+    <strong>Only 6 onboarding spots left in April</strong>
+    <span>Free audit — reply in <em>under 2 hours</em></span>
+  </div>
+  <a href="#audit-form" class="bp" style="padding:0.7rem 1.5rem;font-size:0.82rem" onclick="scrollForm(event)">Claim Free Audit →</a>
+</div>
+
+<script>
+// countdown to end of April 2026
+(function tick(){
+  const end = new Date('2026-05-01T00:00:00');
+  const diff = Math.max(0, end - new Date());
+  document.getElementById('cd-d').textContent = String(Math.floor(diff/86400000)).padStart(2,'0');
+  document.getElementById('cd-h').textContent = String(Math.floor(diff%86400000/3600000)).padStart(2,'0');
+  document.getElementById('cd-m').textContent = String(Math.floor(diff%3600000/60000)).padStart(2,'0');
+  document.getElementById('cd-s').textContent = String(Math.floor(diff%60000/1000)).padStart(2,'0');
+  setTimeout(tick, 1000);
+})();
+
+// sticky bar
+window.addEventListener('scroll',()=>{
+  document.getElementById('sticky').classList.toggle('show', window.scrollY > 550);
+  document.getElementById('nav').classList.toggle('sc', window.scrollY > 20);
+},{passive:true});
+
+// scroll reveal
+const obs = new IntersectionObserver(entries=>{
+  entries.forEach(e=>{ if(e.isIntersecting) e.target.classList.add('vx'); });
+},{threshold:0.1});
+document.querySelectorAll('.rv').forEach(el=>obs.observe(el));
+
+// faq
+function toggleFaq(btn){
+  const item = btn.closest('.faq-item');
+  const open = item.classList.contains('open');
+  document.querySelectorAll('.faq-item.open').forEach(i=>i.classList.remove('open'));
+  if(!open) item.classList.add('open');
+}
+
+// scroll to form
+function scrollForm(e){
+  e.preventDefault();
+  document.getElementById('audit-form').scrollIntoView({behavior:'smooth',block:'center'});
+}
+
+// submit
+function submitForm(){
+  const name = document.getElementById('f-name').value.trim();
+  const email = document.getElementById('f-email').value.trim();
+  const phone = document.getElementById('f-phone').value.trim();
+  const svc = document.getElementById('f-svc').value;
+  if(!name){ alert('Please enter your name.'); return; }
+  if(!email||!email.includes('@')){ alert('Please enter a valid email address.'); return; }
+  if(!phone){ alert('Please enter your phone number.'); return; }
+  if(!svc){ alert('Please select your current website situation.'); return; }
+  // TODO: POST to your CRM / Zapier webhook here
+  gtag('event', 'conversion', {
+    'send_to': 'AW-18109052484/FdBpCNau858cEMTsiLtD',
+    'value': 1.0,
+    'currency': 'GBP'
+  });
+  document.querySelector('.form-fields').classList.add('hide');
+  document.getElementById('success').classList.add('show');
+}
+</script>
+</body>
+</html>
