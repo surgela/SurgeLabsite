@@ -865,8 +865,7 @@ async function submitForm(){
       gtag('set', 'user_data', {
         'email': email.toLowerCase()
       });
-      gtag('event', 'conversion', {
-        'send_to': 'AW-18109052484/FdBpCNau858cEMTsiLtD',
+      gtag('event', 'manual_event_SUBMIT_LEAD_FORM', {
         'value': 1.0,
         'currency': 'GBP'
       });
