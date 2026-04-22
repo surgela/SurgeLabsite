@@ -829,7 +829,8 @@ function scrollForm(e){
 }
 
 // submit
-function submitForm(){
+function esc(s){return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
+async function submitForm(){
   const name = document.getElementById('f-name').value.trim();
   const email = document.getElementById('f-email').value.trim();
   const phone = document.getElementById('f-phone').value.trim();
@@ -838,14 +839,41 @@ function submitForm(){
   if(!email||!email.includes('@')){ alert('Please enter a valid email address.'); return; }
   if(!phone){ alert('Please enter your phone number.'); return; }
   if(!svc){ alert('Please select your current website situation.'); return; }
-  // TODO: POST to your CRM / Zapier webhook here
-  gtag('event', 'conversion', {
-    'send_to': 'AW-18109052484/FdBpCNau858cEMTsiLtD',
-    'value': 1.0,
-    'currency': 'GBP'
-  });
-  document.querySelector('.form-fields').classList.add('hide');
-  document.getElementById('success').classList.add('show');
+
+  const btn = document.querySelector('.fsub');
+  const orig = btn.textContent;
+  btn.textContent = 'Sending...';
+  btn.disabled = true;
+
+  const subject = `New Free Audit Lead – ${name}`;
+  const html = `<h2>New Free Audit Lead (Landing Page)</h2>
+<p><strong>Name:</strong> ${esc(name)}</p>
+<p><strong>Email:</strong> ${esc(email)}</p>
+<p><strong>Phone:</strong> ${esc(phone)}</p>
+<p><strong>Current situation:</strong> ${esc(svc)}</p>`;
+
+  try {
+    const res = await fetch('/submit',{
+      method:'POST',
+      headers:{'content-type':'application/json'},
+      body:JSON.stringify({name,email,subject,html})
+    });
+    if(res.ok){
+      gtag('event', 'conversion', {
+        'send_to': 'AW-18109052484/FdBpCNau858cEMTsiLtD',
+        'value': 1.0,
+        'currency': 'GBP'
+      });
+      document.querySelector('.form-fields').classList.add('hide');
+      document.getElementById('success').classList.add('show');
+    } else {
+      throw new Error('api');
+    }
+  } catch(_){
+    btn.textContent = 'Something went wrong – please email info@surgelab.co.uk';
+    btn.style.background = '#ef4444';
+    setTimeout(()=>{btn.textContent=orig;btn.style.background='';btn.disabled=false;},4000);
+  }
 }
 </script>
 </body>
