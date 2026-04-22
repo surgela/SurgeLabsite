@@ -343,7 +343,7 @@ footer a:hover{color:var(--lime)}
 
 <!-- ── NAV ── -->
 <nav id="nav">
-  <a href="https://surgelab.co.uk" class="nl" target="_blank">
+  <a href="#audit-form" class="nl" onclick="scrollForm(event)">
     <img src="surgelab_logo_transparent_hires.png" alt="Surge Lab"/>
   </a>
   <div class="nav-right">
@@ -355,7 +355,7 @@ footer a:hover{color:var(--lime)}
 <!-- ── SCARCITY BANNER ── -->
 <div class="scar-bar">
   <div class="scar-dot"></div>
-  <p class="scar-text"><strong>Only 6 onboarding spots left in April</strong> — we cap new clients each month to protect results quality</p>
+  <p class="scar-text"><strong>Only 6 onboarding spots left in <span class="month-name">April</span></strong> — we cap new clients each month to protect results quality</p>
   <span class="scar-pill">Limited Availability</span>
 </div>
 
@@ -408,7 +408,7 @@ footer a:hover{color:var(--lime)}
         <div class="scar-block">
           <div class="scar-dot"></div>
           <div>
-            <p class="scar-msg">Only <span>6 spots remaining</span> in April</p>
+            <p class="scar-msg">Only <span>6 spots remaining</span> in <span class="month-name">April</span></p>
             <div class="spots-row">
               <div class="spot taken"></div><div class="spot taken"></div>
               <div class="spot taken"></div><div class="spot taken"></div>
@@ -421,7 +421,7 @@ footer a:hover{color:var(--lime)}
         </div>
 
         <div class="countdown">
-          <div class="cd-label">Offer closes end of April</div>
+          <div class="cd-label">Offer closes end of <span class="month-name">April</span></div>
           <div class="cd-units">
             <div class="cd-unit"><span class="cd-n" id="cd-d">09</span><div class="cd-l">Days</div></div>
             <span class="cd-sep">:</span>
@@ -687,7 +687,6 @@ footer a:hover{color:var(--lime)}
 
     </div>
     <p class="rv" style="text-align:center;font-size:0.8rem;color:var(--muted);margin-top:2rem">All plans are monthly rolling — no lock-in. Pricing discussed during your free audit.</p>
-    <p class="rv" style="text-align:center;margin-top:1.2rem"><a href="https://surgelab.co.uk" target="_blank" style="color:var(--lime);font-size:0.85rem;font-family:'Space Grotesk',sans-serif;font-weight:600;text-decoration:none;border-bottom:1px solid rgba(202,255,51,0.3);padding-bottom:2px;transition:border-color 0.2s" onmouseover="this.style.borderColor='rgba(202,255,51,0.8)'" onmouseout="this.style.borderColor='rgba(202,255,51,0.3)'">← Visit the Surge Lab main site</a></p>
   </div>
 </section>
 
@@ -750,7 +749,7 @@ footer a:hover{color:var(--lime)}
   <div class="final-in">
     <p class="tag rv" style="justify-content:center;display:inline-flex">Last Chance</p>
     <h2 class="h2 rv d1">Your Competitors Are <span class="hl2">Already Moving.</span></h2>
-    <p class="body rv d2" style="margin:0 auto">Every week you wait is another week they pull further ahead on Google and pay less per customer. Claim your spot before April closes.</p>
+    <p class="body rv d2" style="margin:0 auto">Every week you wait is another week they pull further ahead on Google and pay less per customer. Claim your spot before <span class="month-name">April</span> closes.</p>
     <div class="cta-card rv d2">
       <div class="spot-row">
         <div class="spot-ind">
@@ -759,7 +758,7 @@ footer a:hover{color:var(--lime)}
           <div class="s a"></div><div class="s a"></div><div class="s a"></div>
           <div class="s a"></div><div class="s a"></div><div class="s a"></div>
         </div>
-        <span class="spot-lbl"><strong>6 spots</strong> still available in April</span>
+        <span class="spot-lbl"><strong>6 spots</strong> still available in <span class="month-name">April</span></span>
       </div>
       <h3 style="font-family:'Space Grotesk',sans-serif;font-size:1.5rem;font-weight:700;color:var(--white);margin-bottom:0.55rem;letter-spacing:-0.02em">Get Your Free Website &amp; SEO Audit</h3>
       <p style="color:var(--muted);font-size:0.88rem;line-height:1.75;margin-bottom:2rem">60 seconds to apply. We'll confirm your strategy call within 2 hours — and come prepared with your full site audit, ranking gaps and a clear plan.</p>
@@ -777,24 +776,28 @@ footer a:hover{color:var(--lime)}
   <p>© 2026 Surge Lab Ltd · Manchester, UK · <a href="mailto:info@surgelab.co.uk">info@surgelab.co.uk</a></p>
   <div style="display:flex;gap:1.5rem">
     <a href="https://surgelab.co.uk/privacy" target="_blank">Privacy</a>
-    <a href="https://surgelab.co.uk" target="_blank">Main Site</a>
   </div>
 </footer>
 
 <!-- ── STICKY BAR ── -->
 <div class="sticky" id="sticky">
   <div class="sticky-l">
-    <strong>Only 6 onboarding spots left in April</strong>
+    <strong>Only 6 onboarding spots left in <span class="month-name">April</span></strong>
     <span>Free audit — reply in <em>under 2 hours</em></span>
   </div>
   <a href="#audit-form" class="bp" style="padding:0.7rem 1.5rem;font-size:0.82rem" onclick="scrollForm(event)">Book Free Strategy Call →</a>
 </div>
 
 <script>
-// countdown to end of April 2026
+// dynamic current month name - keeps scarcity copy always correct
+const mn = new Date().toLocaleString('en-GB', {month: 'long'});
+document.querySelectorAll('.month-name').forEach(el => el.textContent = mn);
+
+// countdown to end of current month
 (function tick(){
-  const end = new Date('2026-05-01T00:00:00');
-  const diff = Math.max(0, end - new Date());
+  const now = new Date();
+  const end = new Date(now.getFullYear(), now.getMonth() + 1, 1);
+  const diff = Math.max(0, end - now);
   document.getElementById('cd-d').textContent = String(Math.floor(diff/86400000)).padStart(2,'0');
   document.getElementById('cd-h').textContent = String(Math.floor(diff%86400000/3600000)).padStart(2,'0');
   document.getElementById('cd-m').textContent = String(Math.floor(diff%3600000/60000)).padStart(2,'0');
@@ -859,6 +862,9 @@ async function submitForm(){
       body:JSON.stringify({name,email,subject,html})
     });
     if(res.ok){
+      gtag('set', 'user_data', {
+        'email': email.toLowerCase()
+      });
       gtag('event', 'conversion', {
         'send_to': 'AW-18109052484/FdBpCNau858cEMTsiLtD',
         'value': 1.0,

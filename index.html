@@ -1028,6 +1028,9 @@ async function fsubmit(e){
     if(res.ok){
       btn.textContent = "Message Sent! We'll be in touch soon.";
       btn.style.background = '#22c55e';
+      gtag('set', 'user_data', {
+        'email': email.toLowerCase()
+      });
       gtag('event', 'conversion', {
         'send_to': 'AW-18109052484/FdBpCNau858cEMTsiLtD',
         'value': 1.0,
