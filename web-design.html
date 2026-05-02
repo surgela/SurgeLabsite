@@ -188,6 +188,7 @@ select.fi option{background:var(--bg3)}
 .tc{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:2rem;transition:all 0.3s;position:relative;overflow:hidden;display:flex;flex-direction:column}
 .tc::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--lime),transparent);opacity:0.4;border-radius:16px 16px 0 0}
 .tc:hover{transform:translateY(-3px);border-color:var(--borderHover)}
+.tc-g{position:absolute;top:1.4rem;right:1.4rem;width:18px;height:18px;background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'><path fill='%234285F4' d='M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z'/><path fill='%2334A853' d='M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z'/><path fill='%23FBBC05' d='M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z'/><path fill='%23EA4335' d='M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z'/></svg>");background-size:contain;background-repeat:no-repeat;background-position:center;opacity:0.9;z-index:2}
 .stars{color:#FACC15;font-size:0.82rem;letter-spacing:2px;margin-bottom:0.9rem}
 .tc-t{font-size:0.87rem;color:var(--muted);line-height:1.85;font-style:italic;margin-bottom:1.4rem;flex:1}
 .tc-t strong{color:var(--lime);font-style:normal}
@@ -195,6 +196,13 @@ select.fi option{background:var(--bg3)}
 .tc-av{width:38px;height:38px;border-radius:50%;background:linear-gradient(135deg,var(--lime),#9FFF00);display:flex;align-items:center;justify-content:center;color:#09090B;font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:0.75rem;flex-shrink:0}
 .tc-n{font-family:'Space Grotesk',sans-serif;font-size:0.86rem;font-weight:700;color:var(--white)}
 .tc-r{font-size:0.7rem;color:var(--muted);margin-top:1px}
+.g-rating{text-align:center;margin-top:2.2rem}
+.g-rating-row{display:inline-flex;align-items:center;gap:14px;flex-wrap:wrap;justify-content:center}
+.g-wordmark{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:1.75rem;letter-spacing:-0.02em;line-height:1}
+.gw1,.gw4{color:#4285F4}.gw2,.gw6{color:#EA4335}.gw3{color:#FBBC05}.gw5{color:#34A853}
+.g-stars{color:#FACC15;font-size:1.3rem;letter-spacing:3px}
+.g-score{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:1.5rem;color:var(--white)}
+.g-rating-sub{font-size:0.85rem;color:var(--muted);margin-top:0.7rem}
 
 /* ── PROCESS STRIP ── */
 .proc-strip{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border:1px solid var(--border);border-radius:16px;overflow:hidden;margin-top:3.5rem}
@@ -580,30 +588,41 @@ footer a:hover{color:var(--lime)}
       <p class="tag rv">Client Results</p>
       <h2 class="h2 rv d1">What Our Clients <span class="hl">Actually Say</span></h2>
       <p class="body rv d2">We let results do the talking. Here's what UK businesses just like yours have achieved after working with Surge Lab.</p>
+      <div class="g-rating rv">
+        <div class="g-rating-row">
+          <span class="g-wordmark" aria-label="Google"><span class="gw1">G</span><span class="gw2">o</span><span class="gw3">o</span><span class="gw4">g</span><span class="gw5">l</span><span class="gw6">e</span></span>
+          <span class="g-stars" aria-label="5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+          <span class="g-score">5.0</span>
+        </div>
+        <p class="g-rating-sub">Rated 5 stars on Google</p>
+      </div>
     </div>
     <div class="tg">
       <div class="tc rv d1">
+        <span class="tc-g" aria-label="Google review"></span>
         <div class="stars">★★★★★</div>
-        <p class="tc-t">"I'd been through two web designers before Surge Lab and both times I ended up with something that looked fine but did nothing for my business. This time it's completely different — the site actually feels like me, it loads instantly, and people are finding me on Google who never would've before. Can't ask for more than that."</p>
+        <p class="tc-t">"Lewis, Joe and Kyle at Surge Lab do what most digital marketing agencies promise and rarely deliver. Clean, fast websites. Sound strategy. Work shipped on time. Highly recommended."</p>
         <div class="tc-a">
           <div class="tc-av">CS</div>
-          <div><div class="tc-n">Colin</div><div class="tc-r">colinscotland.com</div></div>
+          <div><div class="tc-n">Colin Scotland</div><div class="tc-r">Posted on Google · 5 hours ago</div></div>
         </div>
       </div>
       <div class="tc rv d2">
+        <span class="tc-g" aria-label="Google review"></span>
         <div class="stars">★★★★★</div>
-        <p class="tc-t">"Honestly I wasn't sure what to expect. I'm an accountant, not a tech person, and I just needed something that worked and didn't make me look amateur. They kept it simple, built exactly what we discussed, and I've had proper enquiries through it ever since. No drama, no jargon — just sorted it."</p>
+        <p class="tc-t">"Joe has been amazing to work with! He created a brilliant website for our family business and has been running ads which are bringing in great enquiries. Easy to deal with, knows his stuff and gave us a quick turnaround. 100% recommend!"</p>
         <div class="tc-a">
-          <div class="tc-av">SA</div>
-          <div><div class="tc-n">Sam</div><div class="tc-r">samtheaccountant.co.uk</div></div>
+          <div class="tc-av">GG</div>
+          <div><div class="tc-n">Grace Gilbert</div><div class="tc-r">Posted on Google · 1 week ago</div></div>
         </div>
       </div>
       <div class="tc rv d3">
+        <span class="tc-g" aria-label="Google review"></span>
         <div class="stars">★★★★★</div>
-        <p class="tc-t">"With joinery you live or die on how your work looks — and the old site just wasn't doing it justice. Surge Lab built us something that actually shows off what we do. It loads fast, looks sharp on mobile, and we're getting calls from people who found us on Google. That never really happened before."</p>
+        <p class="tc-t">"Surge Lab made me a website for my travel agency. The result was incredible and the customer service brilliant. I couldn't recommend them enough!"</p>
         <div class="tc-a">
-          <div class="tc-av">KM</div>
-          <div><div class="tc-n">Kristan</div><div class="tc-r">misurajoinery.com</div></div>
+          <div class="tc-av">EL</div>
+          <div><div class="tc-n">Ellie</div><div class="tc-r">Posted on Google · 1 week ago</div></div>
         </div>
       </div>
     </div>
