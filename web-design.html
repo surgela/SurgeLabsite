@@ -78,8 +78,11 @@ nav.sc{height:60px;box-shadow:0 4px 40px rgba(0,0,0,0.5)}
 .hero-in{position:relative;z-index:1;display:grid;grid-template-columns:1.15fr 0.85fr;gap:5rem;align-items:center;width:100%;max-width:1300px;margin:0 auto}
 
 /* left copy */
-.badge{display:inline-flex;align-items:center;gap:8px;background:rgba(202,255,51,0.06);border:1px solid rgba(202,255,51,0.15);color:var(--lime);padding:6px 14px;border-radius:100px;font-family:'Space Grotesk',sans-serif;font-size:0.65rem;font-weight:600;letter-spacing:2.5px;text-transform:uppercase;margin-bottom:2rem}
+.badge{display:inline-flex;align-items:center;gap:8px;background:rgba(202,255,51,0.06);border:1px solid rgba(202,255,51,0.15);color:var(--lime);padding:6px 14px;border-radius:100px;font-family:'Space Grotesk',sans-serif;font-size:0.65rem;font-weight:600;letter-spacing:2.5px;text-transform:uppercase;margin-bottom:1rem}
 .badge-dot{display:block;width:6px;height:6px;border-radius:50%;background:var(--lime);box-shadow:0 0 8px var(--lime);animation:pulse 2.5s ease-in-out infinite}
+.pill-rr{display:inline-flex;align-items:center;gap:9px;background:rgba(255,255,255,0.04);border:1px solid rgba(202,255,51,0.28);color:var(--white);padding:8px 16px;border-radius:100px;font-family:'Space Grotesk',sans-serif;font-size:0.78rem;font-weight:600;margin-bottom:1.6rem;line-height:1.2}
+.pill-rr-ico{display:inline-flex;color:var(--lime)}
+.pill-rr-ico svg{width:14px;height:14px}
 .h1{font-size:clamp(2.8rem,5.2vw,4.8rem);margin-bottom:1.3rem;color:var(--white)}
 .hl{color:var(--lime)}
 .hl2{color:var(--indigo)}
@@ -172,6 +175,9 @@ select.fi option{background:var(--bg3)}
 .wyg-icon{font-size:1.9rem;margin-bottom:0.9rem;display:block}
 .wyg-card h3{font-family:'Space Grotesk',sans-serif;font-size:1.02rem;font-weight:700;color:var(--white);margin-bottom:0.45rem}
 .wyg-card p{color:var(--muted);font-size:0.84rem;line-height:1.78}
+.rr-ico{width:46px;height:46px;display:inline-flex;align-items:center;justify-content:center;color:var(--lime);background:rgba(202,255,51,0.08);border:1px solid rgba(202,255,51,0.2);border-radius:12px;margin-bottom:1.1rem}
+.rr-ico svg{width:24px;height:24px}
+.rr-close{text-align:center;font-style:italic;color:var(--white);font-size:1.02rem;margin-top:2.6rem;max-width:640px;margin-left:auto;margin-right:auto;line-height:1.6}
 
 /* ── RESULTS ── */
 .rg{display:grid;grid-template-columns:repeat(4,1fr);gap:1.2rem;margin-top:3.5rem}
@@ -376,6 +382,7 @@ footer a:hover{color:var(--lime)}
     <!-- LEFT -->
     <div>
       <div class="badge"><span class="badge-dot"></span>Bespoke Web Design &amp; SEO</div>
+      <div class="pill-rr"><span class="pill-rr-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>Pay £0 until your site is live and you love it</div>
       <h1 class="h1">A Website That<br><span class="hl">Actually Ranks.</span><br>And Actually Converts.</h1>
       <p class="hero-body">Most websites look fine and rank nowhere. Ours are <strong>coded from scratch in pure HTML, CSS &amp; JS</strong> — faster, leaner, and built to rank. We'll start by auditing your current site: <strong>how it performs on Google, where it ranks, and exactly what's holding it back.</strong></p>
 
@@ -498,6 +505,34 @@ footer a:hover{color:var(--lime)}
   <div class="ti"><span class="tic">✓</span>SEO built in from day one</div>
   <div class="ti"><span class="tic">✓</span>Reply within 2 hours</div>
 </div>
+
+<!-- ── ZERO RISK ── -->
+<section class="sec alt">
+  <div class="sec-in">
+    <div class="ctr">
+      <p class="tag rv">Zero Risk</p>
+      <h2 class="h2 rv d1">Zero risk. <span class="hl">Here's how it works.</span></h2>
+    </div>
+    <div class="wyg-grid rv d1">
+      <div class="wyg-card">
+        <div class="rr-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div>
+        <h3>£0 to start</h3>
+        <p>No deposit. No setup fee. We build your full site before you pay a penny.</p>
+      </div>
+      <div class="wyg-card">
+        <div class="rr-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 4 23 10 17 10"/><polyline points="1 20 1 14 7 14"/><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"/></svg></div>
+        <h3>Unlimited revisions</h3>
+        <p>We keep refining until you sign off. No "three rounds and you're stuck" nonsense.</p>
+      </div>
+      <div class="wyg-card">
+        <div class="rr-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m11 17 2 2a1 1 0 1 0 3-3"/><path d="m14 14 2.5 2.5a1 1 0 1 0 3-3l-3.88-3.88a3 3 0 0 0-4.24 0l-.88.88a1 1 0 1 1-3-3l2.81-2.81a5.79 5.79 0 0 1 7.06-.87l.47.28a2 2 0 0 0 1.42.25L21 4"/><path d="m21 3 1 11h-2"/><path d="M3 3 2 14l6.5 6.5a1 1 0 1 0 3-3"/><path d="M3 4h8"/></svg></div>
+        <h3>Walk away anytime</h3>
+        <p>If you're not happy when it's done, you owe us nothing. You keep the site either way.</p>
+      </div>
+    </div>
+    <p class="rr-close rv d2">Most agencies take your money and hope. We earn it.</p>
+  </div>
+</section>
 
 <!-- ── WHAT YOU GET ── -->
 <section id="audit" class="sec">
@@ -717,6 +752,13 @@ footer a:hover{color:var(--lime)}
       <h2 class="h2 rv d1">Questions <span class="hl">Answered</span></h2>
     </div>
     <div class="faq-list rv d1">
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          <span class="faq-q-text">What's the catch with paying nothing upfront?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-a"><div class="faq-a-in">There isn't one. We'd rather take the risk than have you take it. If we don't deliver something you're happy with, we don't get paid. That keeps us honest.</div></div>
+      </div>
       <div class="faq-item">
         <button class="faq-q" onclick="toggleFaq(this)">
           <span class="faq-q-text">Why coded? Why not just use WordPress?</span>
