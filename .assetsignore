@@ -1,0 +1,10 @@
+.git
+.gitignore
+.impeccable
+.claude
+.wrangler
+node_modules
+*.md
+worker.js
+wrangler.jsonc
+FAVICON NEW.png
