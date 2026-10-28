@@ -217,6 +217,18 @@ p{margin:0;text-wrap:pretty}
 .msg-sys{align-self:stretch;display:flex;gap:.6rem;align-items:center;margin-top:.6rem;padding:.7rem .8rem;background:var(--navy-800);color:var(--on-dark);font-size:.875rem;font-weight:700}
 .msg-sys .icon{color:var(--cyan)}
 
+/* ---------- Day in the life (sector pages) ---------- */
+.day .ledger-row h3{font-variant-numeric:tabular-nums;color:var(--cyan-ink)}
+.day .beat strong{font-size:clamp(1.15rem,1.6vw,1.35rem)}
+.day .link-arrow{display:flex;width:fit-content;margin-top:.8rem;color:var(--ink)}
+.day .link-arrow:hover{color:var(--cyan-ink)}
+
+/* ---------- Team ---------- */
+.team{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(1.5rem,3vw,3rem);margin-top:clamp(2rem,4vw,3rem);border-top:3px solid var(--rule);padding-top:2rem}
+.team h3{font-size:1.6rem;margin-bottom:.4rem}
+.team p{color:var(--ink-2)}
+@media (max-width:50rem){.team{grid-template-columns:1fr}}
+
 /* ---------- Case study slot ---------- */
 .todo{border:2px dashed #B3261E;background:#FFF4F2;color:#5C1410;padding:1.5rem;font-size:.9375rem}
 .todo b{display:block;margin-bottom:.35rem}

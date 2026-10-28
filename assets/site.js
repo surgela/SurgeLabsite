@@ -274,6 +274,50 @@
     });
   }
 
+  /* ---------- Lead follow-up demo: text me now ---------- */
+  var demo = document.getElementById("demo-text");
+  if (demo) {
+    var dmsg = demo.querySelector(".form-msg");
+    var say = function (state, text) {
+      dmsg.hidden = false;
+      dmsg.dataset.state = state;
+      dmsg.textContent = text;
+    };
+    demo.addEventListener("submit", function (e) {
+      e.preventDefault();
+      var name = demo.elements.name, phone = demo.elements.phone, ok = demo.elements.sms_consent;
+      [name, phone].forEach(function (el) {
+        el.setAttribute("aria-invalid", el.value.trim() !== "" && el.checkValidity() ? "false" : "true");
+      });
+      if (!name.value.trim() || !phone.checkValidity() || !phone.value.trim()) {
+        say("err", "We need your first name and a mobile number to send the text.");
+        return;
+      }
+      if (!ok.checked) {
+        say("err", "Tick the box so we're allowed to text you.");
+        ok.focus();
+        return;
+      }
+      var btn = demo.querySelector("button[type=submit]");
+      btn.disabled = true;
+      fetch("/demo-text", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ name: name.value.trim(), phone: phone.value.trim(), sms_consent: true })
+      })
+        .then(function (r) { if (!r.ok) throw new Error(r.status); })
+        .then(function () {
+          say("ok", "Sent. Keep an eye on your phone: it should land within 60 seconds.");
+          demo.reset();
+          track("demo_text_requested");
+        })
+        .catch(function () {
+          say("err", "The demo isn't switched on yet. Book a 15-minute call and we'll show you it live.");
+        })
+        .then(function () { btn.disabled = false; });
+    });
+  }
+
   var y = document.getElementById("year");
   if (y) y.textContent = new Date().getFullYear();
 })();
