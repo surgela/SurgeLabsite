@@ -257,7 +257,7 @@
           msg.hidden = false;
           msg.dataset.state = "ok";
           msg.textContent = consent
-            ? "Got it. Keep an eye on your phone: you'll get a text from us shortly."
+            ? "Got it. We'll text you back the same working day."
             : "Got it. We'll get back to you the same working day.";
           form.reset();
           track("generate_lead", { form: "enquiry", sms_consent: consent });
