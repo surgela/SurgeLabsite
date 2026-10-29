@@ -2,7 +2,7 @@
 
 <!-- impeccable:product-schema 1 -->
 
-Source: Surge Lab Website Rebuild Brief, 28 Oct 2026, confirmed by Lewis as the brief for this build. It stands in for the init interview.
+Source: Surge Lab Website Rebuild Brief, 28 Oct 2026, confirmed by Lewis as the brief for this build. It stands in for the init interview. Joe's review on 29 Oct 2026 overrides the brief where they differ: no no-win-no-fee offer anywhere, web design is a service, more emphasis on automations, CRMs, chatbots and document AI (RAG), and a new colourway.
 
 ## Platform
 
@@ -22,12 +22,12 @@ Surge Lab builds the systems that let a business grow without the owner working 
 
 ## Positioning
 
-Built, not rented. Surge Lab builds its own systems instead of reselling off-the-shelf software, joins leads, calls, reviews and admin into one system, runs its own lead gen on the same systems, and takes the risk first with no-win-no-fee reactivation.
+Built, not rented. Surge Lab builds its own systems instead of reselling off-the-shelf software, joins leads, calls, reviews and admin into one system, and runs its own lead gen on the same systems. The point is automating the repetitive work so owners can focus on the business.
 
 Three pillars, six services:
-- Win more work: database reactivation, AI lead follow-up, reviews and referrals (add-on)
+- Win more work: websites, database reactivation, AI lead follow-up, reviews and referrals (add-on)
 - Get your time back: AI voice receptionist, AI website chatbot
-- Run on autopilot: custom systems (lead gen engines, CRMs, quoting tools, knowledge bots, automations)
+- Run on autopilot: custom systems (CRMs, automations, AI chatbots, document AI/RAG, lead gen engines, quoting tools)
 
 ## Operating Context
 
@@ -35,7 +35,7 @@ The site is the demo: the contact form texts the enquirer back within 60 seconds
 
 ## Capabilities and Constraints
 
-- Pricing on site: reactivation shows "No-win-no-fee to start" only. Reviews may show as an add-on. Voice receptionist and chatbot may show a "from" price. Lead follow-up and custom systems never show prices.
+- Pricing on site: no no-win-no-fee offer anywhere (Joe, 29 Oct 2026). Reviews may show as an add-on. Voice receptionist and chatbot may show a "from" price. Lead follow-up and custom systems never show prices.
 - The chatbot never quotes retainer prices and always offers the call.
 - UK GDPR and PECR: unticked SMS consent box, the instant text only fires when ticked, the chatbot discloses it is AI, cookie reject is as easy as accept, no analytics before consent.
 - Performance: under 2s on mobile 4G, Lighthouse 90+. Accessibility: WCAG 2.2 AA.
@@ -44,7 +44,7 @@ The site is the demo: the contact form texts the enquirer back within 60 seconds
 
 ## Brand Commitments
 
-- Navy and cyan stay as the base, with one accent used sparingly for calls to action. The logo is a flask with teal liquid and a rising arrow.
+- Colours come from the logo (a flask with teal-green liquid and a rising arrow): deep green-black grounds with the logo's mint as the accent. Joe asked for a new colourway on 29 Oct 2026, replacing the old navy and cyan.
 - Voice: talk like you would to an owner over a brew. Short sentences, British spelling, a bit of cheek, a number, result or picture of their day in every line. Use their words: booked jobs, your diary, your evenings, quotes that went quiet.
 - Banned words: solutions, leverage, streamline, empower, elevate, unlock, seamless, cutting-edge, game-changer, next level, revolutionise, transform your business, "in today's fast-paced world". No exclamation marks in headlines. No em dashes anywhere.
 - Never describe the work as "hand-coded" in any copy.
@@ -60,7 +60,7 @@ The site is the demo: the contact form texts the enquirer back within 60 seconds
 1. Outcomes first: booked jobs, evenings back, admin gone.
 2. Prove it on the page: the site does what it sells.
 3. One action: book the 15-minute call.
-4. Take the risk first: no-win-no-fee leads the door.
+4. Automate the boring bits so owners get time back.
 5. Never fake proof.
 
 ## Accessibility & Inclusion
