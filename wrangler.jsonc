@@ -11,5 +11,13 @@
   },
   "compatibility_flags": [
     "nodejs_compat"
+  ],
+  // Chatbot: at most 12 messages a minute from one visitor, per Cloudflare location
+  "ratelimits": [
+    {
+      "name": "CHAT_LIMITER",
+      "namespace_id": "1001",
+      "simple": { "limit": 12, "period": 60 }
+    }
   ]
 }

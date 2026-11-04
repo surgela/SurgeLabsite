@@ -8,3 +8,9 @@ node_modules
 worker.js
 wrangler.jsonc
 FAVICON NEW.png
+
+# Worker source and npm files are not public assets
+src
+package.json
+package-lock.json
+.dev.vars*
