@@ -6,14 +6,14 @@
 <title>Book a 15-Minute Call | Surge Lab</title>
 <meta name="description" content="Book a free 15-minute call with Surge Lab. We'll look at what's eating your week, whether your old quotes are worth chasing, and what it would cost.">
 <link rel="canonical" href="https://surgelab.co.uk/book">
-<meta name="theme-color" content="#06100E">
+<meta name="theme-color" content="#0B1F19">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://surgelab.co.uk/book">
 <meta property="og:title" content="Book a 15-minute call | Surge Lab">
 <meta property="og:image" content="https://surgelab.co.uk/social-pic.jpg">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="preload" href="/fonts/archivo-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/assets/site.css?v=9">
+<link rel="stylesheet" href="/assets/site.css?v=11">
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -45,7 +45,6 @@
         <div class="dd-panel dd-wide" id="dd-services" hidden>
           <div class="dd-group">
             <h3>Win more work</h3>
-            <a href="/websites">Websites<span>Fast, coded, built to rank</span></a>
             <a href="/reactivation">Database reactivation<span>Old quotes turned into jobs</span></a>
             <a href="/lead-follow-up">AI lead follow-up<span>Every lead answered in a minute</span></a>
             <a href="/reviews">Reviews and referrals<span>Happy customers, next jobs</span></a>
@@ -57,7 +56,11 @@
           </div>
           <div class="dd-group">
             <h3>Run on autopilot</h3>
-            <a href="/custom-systems">Custom systems<span>CRMs, quoting tools, automations</span></a>
+            <a href="/custom-systems">Custom systems<span>CRMs, automations, chatbots, document AI</span></a>
+          </div>
+          <div class="dd-group dd-also">
+            <h3>Also</h3>
+            <a href="/websites">Websites<span>Fast, custom-coded, built to rank</span></a>
           </div>
         </div>
       </div>
@@ -119,13 +122,13 @@
       <div>
         <h2>Services</h2>
         <ul>
-          <li><a href="/websites">Websites</a></li>
           <li><a href="/reactivation">Database reactivation</a></li>
           <li><a href="/lead-follow-up">AI lead follow-up</a></li>
           <li><a href="/reviews">Reviews and referrals</a></li>
           <li><a href="/voice-receptionist">AI voice receptionist</a></li>
           <li><a href="/chatbot">AI website chatbot</a></li>
           <li><a href="/custom-systems">Custom systems</a></li>
+          <li><a href="/websites">Websites</a></li>
         </ul>
       </div>
       <div>
@@ -171,7 +174,7 @@
   (function (C, A, L) { var p = function (a, ar) { a.q.push(ar); }; var d = C.document; C.Cal = C.Cal || function () { var cal = C.Cal; var ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { var api = function () { p(api, arguments); }; var namespace = ar[1]; api.q = api.q || []; if (typeof namespace === "string") { cal.ns[namespace] = cal.ns[namespace] || api; p(cal.ns[namespace], ar); p(cal, ["initNamespace", namespace]); } else p(cal, ar); return; } p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
   Cal("init", "15min", { origin: "https://cal.com" });
   Cal.ns["15min"]("inline", { elementOrSelector: "#calendar", calLink: "surgelab/15min", config: { layout: "month_view", theme: "dark" } });
-  Cal.ns["15min"]("ui", { theme: "dark", hideEventTypeDetails: false, layout: "month_view", cssVarsPerTheme: { dark: { "cal-brand": "#34E3A6", "cal-brand-emphasis": "#86F0C9", "cal-brand-text": "#03100B" } } });
+  Cal.ns["15min"]("ui", { theme: "dark", hideEventTypeDetails: false, layout: "month_view", cssVarsPerTheme: { dark: { "cal-brand": "#34E3A6", "cal-brand-emphasis": "#86F0C9", "cal-brand-text": "#05140F" } } });
   Cal.ns["15min"]("on", { action: "bookingSuccessful", callback: function () { if (window.gtag) gtag("event", "booking_made", { method: "cal.com" }); } });
 </script>
 <script src="/assets/site.js?v=3" defer></script>

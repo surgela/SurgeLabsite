@@ -1,19 +1,20 @@
 # Design
 
-Lab-glass green, sharp and hairline. The colours come from the logo's teal-green flask: deep green-black grounds, 1px hairline rules, wide upper-case Archivo headlines with one italic serif phrase in mint, mint pill buttons. Every token lives in `assets/site.css` `:root`; new pages reuse the classes there.
+Bottle green, sharp and hairline. The colours come from the logo's teal-green flask: deep bottle-green grounds, 1px hairline rules, wide upper-case Archivo headlines with one italic serif phrase in pale mint, and strong mint kept for buttons only so the booking button stands alone. Every token lives in `assets/site.css` `:root`; new pages reuse the classes there.
 
 ## Colour
 
 | Token | Value | Use |
 | --- | --- | --- |
-| `--bg` | #06100E | Page ground, heroes, `.night` and `.white` sections |
-| `--bg-2` | #0A1714 | Alternate sections: `.dark` and `.light` |
-| `--bg-3` | #0F201B | Panels: forms, calculator, threads, reviews, dropdowns |
-| `--bg-4` | #173129 | Avatars, slider tracks |
-| `--foot` | #040A08 | Footer |
-| `--line` / `--line-2` | 12% / 22% pale green | Hairline rules and panel borders |
-| `--text` / `--text-2` / `--text-3` | #EEF4F0 / #A6BAB1 / #8BA399 | Primary, secondary, tertiary text (all pass AA) |
-| `--accent` | #34E3A6 | Logo mint: buttons, accent words, icons, big numbers |
+| `--bg` | #0B1F19 | Page ground, heroes, `.night` and `.white` sections |
+| `--bg-2` | #0E261F | Alternate sections: `.dark` and `.light` |
+| `--bg-3` | #133129 | Panels: forms, calculator, threads, reviews, dropdowns |
+| `--bg-4` | #1B3F35 | Avatars, slider tracks |
+| `--foot` | #071510 | Footer |
+| `--line` / `--line-2` | 13% / 24% pale green | Hairline rules and panel borders |
+| `--text` / `--text-2` / `--text-3` | #F1EFE9 / #B4C4BC / #94AAA0 | Primary, secondary, tertiary text (all pass AA) |
+| `--sage` | #A9DCC6 | Pale mint: italic accent words, icons, links, step numbers, big numbers |
+| `--accent` | #3EE0A5 | Strong logo mint: booking buttons, focus rings, form controls only |
 
 No purple, no gradient text, no glows. The only gradient is the faint mint wash on the `.pitch` panel. Message bubbles keep iPhone blue so the example threads read as a real phone.
 
