@@ -1,30 +1,30 @@
 # Design
 
-Bottle green, sharp and hairline. The colours come from the logo's teal-green flask: deep bottle-green grounds, 1px hairline rules, wide upper-case Archivo headlines with one italic serif phrase in pale mint, and strong mint kept for buttons only so the booking button stands alone. Every token lives in `assets/site.css` `:root`; new pages reuse the classes there.
+Workwear navy, sharp and hairline. Navy grounds (blue reads as trustworthy and competent; near-black tested least trustworthy), 1px hairline rules, wide upper-case Archivo headlines with one italic serif phrase in soft sky blue, and the logo's teal kept for booking buttons only so they stand alone (contrast and isolation, not hue, is what moves clicks). Orange was tried and dropped as it read like a DIY chain. Every token lives in `assets/site.css` `:root`; new pages reuse the classes there.
 
 ## Colour
 
 | Token | Value | Use |
 | --- | --- | --- |
-| `--bg` | #0B1F19 | Page ground, heroes, `.night` and `.white` sections |
-| `--bg-2` | #0E261F | Alternate sections: `.dark` and `.light` |
-| `--bg-3` | #133129 | Panels: forms, calculator, threads, reviews, dropdowns |
-| `--bg-4` | #1B3F35 | Avatars, slider tracks |
-| `--foot` | #071510 | Footer |
-| `--line` / `--line-2` | 13% / 24% pale green | Hairline rules and panel borders |
-| `--text` / `--text-2` / `--text-3` | #F1EFE9 / #B4C4BC / #94AAA0 | Primary, secondary, tertiary text (all pass AA) |
-| `--sage` | #A9DCC6 | Pale mint: italic accent words, icons, links, step numbers, big numbers |
-| `--accent` | #3EE0A5 | Strong logo mint: booking buttons, focus rings, form controls only |
+| `--bg` | #0E1F3A | Page ground, heroes, `.night` and `.white` sections |
+| `--bg-2` | #112645 | Alternate sections: `.dark` and `.light` |
+| `--bg-3` | #172E52 | Panels: forms, calculator, threads, reviews, dropdowns |
+| `--bg-4` | #21406E | Avatars, slider tracks |
+| `--foot` | #0A172C | Footer |
+| `--line` / `--line-2` | 14% / 26% pale blue | Hairline rules and panel borders |
+| `--text` / `--text-2` / `--text-3` | #F3F5F9 / #B8C4D9 / #9DABC4 | Primary, secondary, tertiary text (all pass AA) |
+| `--soft` | #A9C8F2 | Soft sky blue: italic accent words, icons, links, step numbers, big numbers |
+| `--accent` | #2FD4B4 | Logo teal: booking buttons, focus rings, form controls only |
 
-No purple, no gradient text, no glows. The only gradient is the faint mint wash on the `.pitch` panel. Message bubbles keep iPhone blue so the example threads read as a real phone.
+No purple, no gradient text, no glows. The only gradient is the faint sky-blue wash on the `.pitch` panel. Message bubbles keep iPhone blue so the example threads read as a real phone.
 
 ## Type
 
 - Display: Archivo (`fonts/archivo-latin.woff2`), weight 800, `font-stretch` 125%, upper case for h1 and h2.
-- Accent: Instrument Serif italic (`fonts/instrument-serif-italic-latin.woff2`), via `<em>` inside an h1 or h2 only, never body text. Normal case, mint, one phrase per heading, usually the last few words: `Your old quotes are full of <em>jobs.</em>`
+- Accent: Instrument Serif italic (`fonts/instrument-serif-italic-latin.woff2`), via `<em>` inside an h1 or h2 only, never body text. Normal case, sky blue, one phrase per heading, usually the last few words: `Your old quotes are full of <em>jobs.</em>`
 - Body: Atkinson Hyperlegible Next (`fonts/atkinson-next-latin.woff2`), 17px, line-height 1.65.
 - Labels, nav and buttons: Archivo, upper case, letter-spacing .14 to .18em, never smaller than .75rem.
-- Step numbers (`.how`, `.steps`) and day or time labels in `.day` ledgers use the italic serif in mint.
+- Step numbers (`.how`, `.steps`) and day or time labels in `.day` ledgers use the italic serif in sky blue.
 
 ## Shape and structure
 
@@ -34,7 +34,7 @@ No purple, no gradient text, no glows. The only gradient is the faint mint wash 
 
 ## Components
 
-- `.btn-book` (mint pill, primary), `.btn-line` (hairline pill, secondary), `.link-arrow` (mint upper-case text link).
+- `.btn-book` (teal pill, primary), `.btn-line` (hairline pill, secondary), `.link-arrow` (sky-blue upper-case text link).
 - `.band`: scrolling outline-text strip of the six services under the home hero. Pauses on hover, stops with reduced motion.
 - `.risk-note`: shield icon plus a short reassurance line, near booking buttons. No no-win-no-fee offer anywhere.
 - `.thread`: dark-mode SMS conversation, always tagged "Example".

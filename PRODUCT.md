@@ -44,7 +44,7 @@ The site is the demo: the contact form texts the enquirer back within 60 seconds
 
 ## Brand Commitments
 
-- Colours come from the logo (a flask with teal-green liquid and a rising arrow): deep green-black grounds with the logo's mint as the accent. Joe asked for a new colourway on 29 Oct 2026, replacing the old navy and cyan.
+- Colours (4 Nov 2026, chosen from research by Lewis): workwear navy grounds, soft sky blue for accents, the logo's teal for booking buttons only. Orange was rejected as it looked like B&Q. Replaces the earlier navy-and-cyan and green versions.
 - Voice: talk like you would to an owner over a brew. Short sentences, British spelling, a bit of cheek, a number, result or picture of their day in every line. Use their words: booked jobs, your diary, your evenings, quotes that went quiet.
 - Banned words: solutions, leverage, streamline, empower, elevate, unlock, seamless, cutting-edge, game-changer, next level, revolutionise, transform your business, "in today's fast-paced world". No exclamation marks in headlines. No em dashes anywhere.
 - Never describe the work as "hand-coded" in any copy.
