@@ -6,3 +6,7 @@
 !.env.example
 
 node_modules
+
+# iCloud Drive conflict copies (e.g. "privacy 2.html")
+* 2.*
+* 2
