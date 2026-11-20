@@ -4,7 +4,7 @@
 
 Source: Surge Lab Website Rebuild Brief, 28 Oct 2026, confirmed by Lewis as the brief for this build. It stands in for the init interview. Joe's review on 29 Oct 2026 overrides the brief where they differ: no no-win-no-fee offer anywhere, web design is a service, more emphasis on automations, CRMs, chatbots and document AI (RAG), and a new colourway.
 
-Positioning update, 20 Nov 2026 (Lewis): Surge Lab offers everything in one place and tailors it to each business rather than selling a fixed list. The message is time back: AI receptionists, organised calls and diaries, automatic text replies, lead chasing, organisation and admin. Keep the wording a little open ("a few of the usual suspects", "if it's repetitive, ask") instead of promising "anything". Layout and design are unchanged.
+Positioning update, 20 Nov 2026 (Lewis): Surge Lab offers everything in one place and tailors it to each business rather than selling a fixed list. The message is time back: AI receptionists, organised calls and diaries, automatic text replies, lead chasing, organisation and admin. Keep the wording a little open ("a few of the usual suspects", "if it's repetitive, ask") instead of promising "anything". Layout and design are unchanged. 20 Nov update (Lewis): don't say "we build AI", it puts people off; say "we build automations". Lead with the owner's pain points (missed calls, leads gone cold, admin eating evenings), not with what we do.
 
 ## Platform
 
