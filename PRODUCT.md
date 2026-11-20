@@ -4,6 +4,8 @@
 
 Source: Surge Lab Website Rebuild Brief, 28 Oct 2026, confirmed by Lewis as the brief for this build. It stands in for the init interview. Joe's review on 29 Oct 2026 overrides the brief where they differ: no no-win-no-fee offer anywhere, web design is a service, more emphasis on automations, CRMs, chatbots and document AI (RAG), and a new colourway.
 
+Positioning update, 20 Nov 2026 (Lewis): Surge Lab offers everything in one place and tailors it to each business rather than selling a fixed list. The message is time back: AI receptionists, organised calls and diaries, automatic text replies, lead chasing, organisation and admin. Keep the wording a little open ("a few of the usual suspects", "if it's repetitive, ask") instead of promising "anything". Layout and design are unchanged.
+
 ## Platform
 
 web
@@ -14,7 +16,7 @@ Static HTML, CSS and JS on a Cloudflare Worker (`worker.js`, `wrangler.jsonc`, a
 
 ## Users
 
-Owners of busy, owner-run UK businesses who are good at the job and buried in the admin around it. First focus: home improvement (kitchens, bathrooms, windows, roofing). Second: clinics, dental and private healthcare. They mostly visit on a phone, between jobs, and buy booked jobs and saved time, not "AI".
+Owners of busy, owner-run UK businesses of any kind who are good at the job and buried in the admin around it. Home improvement and clinics keep their sector pages as examples. They mostly visit on a phone, between jobs, and buy booked jobs and saved time, not "AI".
 
 ## Product Purpose
 
@@ -27,7 +29,7 @@ Built, not rented. Surge Lab builds its own systems instead of reselling off-the
 Three pillars, six services:
 - Win more work: websites, database reactivation, AI lead follow-up, reviews and referrals (add-on)
 - Get your time back: AI voice receptionist, AI website chatbot
-- Run on autopilot: custom systems (CRMs, automations, AI chatbots, document AI/RAG, lead gen engines, quoting tools)
+- Run on autopilot: custom systems (diaries and calendars, CRMs, automations, document AI/RAG, lead gen engines, quotes and paperwork, plus whatever else a client needs)
 
 ## Operating Context
 
