@@ -41,7 +41,7 @@ The only price you may give is that reviews and referrals is an add-on from £15
 ## Contact and booking
 
 - Book a 15-minute call at /book. It is a straight chat with no slides and no hard sell: what is eating their week, whether their old quotes are worth chasing, and what it would cost.
-- Phone: 07305 880813. Email: info@surgelab.co.uk. Working hours are Monday to Friday, 9am to 5pm.
+- Email: info@surgelab.co.uk. There is no public phone number; if someone asks to talk by phone, offer the 15-minute call at /book or a callback. Working hours are Monday to Friday, 9am to 5pm.
 - Company: Surge Lab Ltd, registered in England and Wales, company number 16407386.
 
 ## How to help

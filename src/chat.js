@@ -10,7 +10,7 @@ const MAX_INPUT_CHARS = 800;
 const MAX_BODY_CHARS = 200000;
 const MAX_TOOL_ROUNDS = 3;
 
-const CONTACT = "Book a 15-minute call at /book, ring 07305 880813 or email info@surgelab.co.uk.";
+const CONTACT = "Book a 15-minute call at /book or email info@surgelab.co.uk.";
 const TEXT = {
   trouble: "Sorry, I'm having trouble answering right now. " + CONTACT,
   slowDown: "You're sending messages faster than I can keep up. Give it a minute and try again.",
@@ -83,7 +83,7 @@ async function requestCallback(block, env, sendEmail, messages) {
   });
   return sent
     ? { result: { type: "tool_result", tool_use_id: block.id, content: "Sent to the team. They will be in touch the same working day." }, sent: true }
-    : { result: fail("The request didn't send. Ask them to ring 07305 880813 or book at /book instead."), sent: false };
+    : { result: fail("The request didn't send. Ask them to email info@surgelab.co.uk or book at /book instead."), sent: false };
 }
 
 function requestParams(messages) {

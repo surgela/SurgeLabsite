@@ -22,12 +22,11 @@
       return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c];
     });
   }
-  // Plain text in, safe HTML out: site paths, emails and the phone number become links.
+  // Plain text in, safe HTML out: site paths and emails become links.
   function format(text) {
     return esc(text)
       .replace(/(^|[\s(])(\/[a-z-]+)(?=[\s).,!?]|$)/gm, '$1<a href="$2">$2</a>')
       .replace(/\binfo@surgelab\.co\.uk\b/g, '<a href="mailto:info@surgelab.co.uk">info@surgelab.co.uk</a>')
-      .replace(/\b07305 880813\b/g, '<a href="tel:+447305880813">07305 880813</a>')
       .replace(/\n{2,}/g, "</p><p>").replace(/\n/g, "<br>");
   }
   function textOf(content) {
@@ -123,7 +122,7 @@
         if (data.reset) state.messages = [];
         if (Array.isArray(data.append)) state.messages = state.messages.concat(data.append);
         save();
-        bubble("bot", format(data.reply || "Sorry, something went wrong. Book a call at /book or ring 07305 880813."));
+        bubble("bot", format(data.reply || "Sorry, something went wrong. Book a call at /book or email info@surgelab.co.uk."));
         if (data.callback && window.gtag) gtag("event", "chat_callback_requested");
       })
       .catch(function () {

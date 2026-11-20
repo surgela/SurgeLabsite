@@ -111,7 +111,7 @@ p{margin:0;text-wrap:pretty}
 .book-bar{display:none}
 @media (max-width:47.99rem){
   :root{--bar-h:4.75rem}
-  .book-bar{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:40;gap:.6rem;align-items:center;padding:.7rem var(--gutter) calc(.7rem + env(safe-area-inset-bottom,0px));background:rgba(5,7,14,.92);-webkit-backdrop-filter:blur(16px);backdrop-filter:blur(16px);border-top:1px solid var(--line)}
+  .book-bar{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:40;gap:.6rem;align-items:center;padding:.7rem var(--gutter) calc(.7rem + env(safe-area-inset-bottom,0px));background:rgba(14,31,58,.94);-webkit-backdrop-filter:blur(16px);backdrop-filter:blur(16px);border-top:1px solid var(--line)}
   .book-bar .btn{flex:1;min-height:3.1rem}
   .book-bar .bar-call{flex:none;width:3.1rem;padding:0;color:var(--text);border-color:var(--line-2);background:transparent}
 }
