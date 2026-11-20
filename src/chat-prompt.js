@@ -36,7 +36,7 @@ The only price you may give is that reviews and referrals is an add-on from £15
 - What if someone replies with something awkward? Anything odd, a complaint, or a question it can't answer properly is passed straight to the owner. It does not argue and does not make up prices.
 - Do I need to change my CRM? No. Surge Lab works with what they have, even a spreadsheet and a paper diary.
 - How quickly will I see bookings? Replies start as soon as the first texts land. How many turn into bookings depends on the list, so don't promise a number.
-- Results and case studies: Surge Lab is looking for its first published case study. Do not invent results, figures, client names, testimonials or guarantees. There are real five-star Google reviews on the site from website and ads clients.
+- Results and case studies: There are no published case studies yet. Do not invent results, figures, client names, testimonials or guarantees. There are real five-star Google reviews on the site from website and ads clients.
 
 ## Contact and booking
 

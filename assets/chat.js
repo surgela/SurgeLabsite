@@ -38,7 +38,7 @@
   var root = document.createElement("div");
   root.className = "chat";
   root.innerHTML =
-    '<button class="chat-launch" type="button" aria-expanded="false" aria-controls="chat-panel" aria-label="Ask our AI assistant">' + icon("i-msg") + '<span>Ask our AI</span></button>' +
+    '<button class="chat-launch" type="button" aria-expanded="false" aria-controls="chat-panel" aria-label="Chat with us">' + icon("i-msg") + '<span>Chat<span class="chat-more"> with us</span></span></button>' +
     '<section class="chat-panel" id="chat-panel" role="dialog" aria-label="Chat with Surge Lab\'s AI assistant" hidden>' +
       '<header class="chat-head"><div><b>Surge Lab assistant</b><small>AI assistant. A person can take over any time.</small></div>' +
       '<button class="chat-new" type="button">New chat</button>' +

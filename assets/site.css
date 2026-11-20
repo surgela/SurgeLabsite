@@ -432,8 +432,9 @@ p{margin:0;text-wrap:pretty}
 /* ---------- Website chatbot ---------- */
 .chat{position:fixed;right:max(16px,env(safe-area-inset-right,0px));bottom:calc(var(--bar-h) + 1rem);z-index:65;display:flex;flex-direction:column;align-items:flex-end;gap:.75rem}
 .chat-launch{display:inline-flex;align-items:center;gap:.55rem;min-height:3rem;padding:.7rem 1.15rem;border-radius:100px;border:1px solid var(--line-2);background:var(--bg-4);color:var(--text);font-family:var(--disp);font-stretch:112%;font-weight:700;font-size:.75rem;letter-spacing:.14em;text-transform:uppercase;cursor:pointer;box-shadow:0 14px 34px -14px rgba(0,0,0,.7);transition:border-color .2s var(--ease),transform .2s var(--ease)}
-.chat-launch .icon{color:var(--soft);width:1.15rem;height:1.15rem}
-.chat-launch:hover{border-color:var(--soft);transform:translateY(-1px)}
+.chat-launch{background:var(--soft);color:var(--ink);border-color:transparent}
+.chat-launch .icon{color:var(--ink);width:1.15rem;height:1.15rem}
+.chat-launch:hover{background:#C9DCF6;border-color:transparent;transform:translateY(-1px)}
 .chat.is-open .chat-launch{display:none}
 .chat-panel{width:min(24rem,calc(100vw - 32px));height:min(36rem,calc(100dvh - var(--bar-h) - 6rem));display:flex;flex-direction:column;background:var(--bg-3);color:var(--text);border:1px solid var(--line-2);border-radius:20px;box-shadow:0 30px 70px -20px rgba(0,0,0,.75);overflow:hidden}
 .chat-head{display:flex;align-items:center;gap:.6rem;padding:1rem 1rem .9rem 1.2rem;border-bottom:1px solid var(--line)}
@@ -468,8 +469,12 @@ p{margin:0;text-wrap:pretty}
 .chat-note{margin:0;padding:0 1rem .8rem;font-size:.75rem;color:var(--text-3)}
 .chat-note a{color:var(--text-2)}
 @media (max-width:47.99rem){
-  .chat-launch span{display:none}
-  .chat-launch{width:3.1rem;height:3.1rem;padding:0;justify-content:center}
+  /* On phones the chat button sits inside the booking bar, beside the book button */
+  .chat{right:var(--gutter);bottom:calc(.7rem + env(safe-area-inset-bottom,0px))}
+  .chat-more{display:none}
+  .chat-launch{height:3.16rem;min-height:3.16rem;padding:0 .8rem;gap:.4rem;box-shadow:none;letter-spacing:.1em}
+  .book-bar{padding-right:calc(var(--gutter) + 6.6rem)}
+  .book-bar .btn-book{padding-inline:.7rem;letter-spacing:.1em;white-space:nowrap}
   .chat.is-open{left:0;right:0;bottom:0;align-items:stretch}
   .chat-panel{width:100%;height:calc(100dvh - 3.5rem);border-radius:20px 20px 0 0;padding-bottom:env(safe-area-inset-bottom,0px)}
 }
