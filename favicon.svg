@@ -1,16 +1,8 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
-  <!-- Black background -->
-  <rect width="100" height="100" fill="#000"/>
-
-  <!-- Solid teal flask - bold and simple -->
-  <path d="M38 8 L38 36 L10 80 Q6 90 12 95 Q16 100 24 100 L76 100 Q84 100 88 95 Q94 90 90 80 L62 36 L62 8 Z"
-        fill="#00C49A"/>
-
-  <!-- White arrow up-right -->
-  <polyline points="30,78 48,54 60,62 78,30"
-            fill="none" stroke="white" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
-  <polygon points="78,30 64,34 70,46" fill="white"/>
-
-  <!-- Neck bar -->
-  <rect x="34" y="4" width="32" height="7" rx="3" fill="#00C49A"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="395 260 300 300">
+  <defs><linearGradient id="l" x1="0" x2="1"><stop offset="0" stop-color="#8FE3D2"/><stop offset=".55" stop-color="#14BBA0"/></linearGradient></defs>
+  <rect x="395" y="260" width="300" height="300" rx="60" fill="#0E1F3A"/>
+  <path d="M436 488Q474 467 522 474Q572 482 606 470L619 494Q630 517 609 527H451Q425 519 435 494Z" fill="url(#l)"/>
+  <g fill="none" stroke="#F4F7FB" stroke-width="14" stroke-linecap="round" stroke-linejoin="round"><rect x="477" y="281" width="104" height="15" rx="7.5"/><path d="M492 296V358L421 490Q410 512 422 530Q432 542 450 542H606Q624 542 634 530Q646 512 635 490L593 412"/><path d="M566 296V362L572 374"/></g>
+  <path d="M452 464L497 414L514 438L547 380L568 414L630 336" fill="none" stroke="#1FBDA2" stroke-width="15" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M666 286L624 304L652 327Z" fill="#1FBDA2" stroke="#1FBDA2" stroke-width="6" stroke-linejoin="round"/>
 </svg>
